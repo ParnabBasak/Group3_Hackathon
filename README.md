@@ -8,9 +8,9 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Prerequisites
 
-Angular
-Node
-MongoDB
+- Angular
+- Node
+- MongoDB
 
 ### Installing
 
