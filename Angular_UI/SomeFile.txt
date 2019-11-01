@@ -1,2 +1,2 @@
 This is some File. Added a new line. One more change added.
-This is commit to dev branch
+This is commit to dev branch. Right.
