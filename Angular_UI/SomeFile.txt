@@ -1,1 +1,5 @@
+<<<<<<< HEAD
 This is some File. Added a new line. Added.
+=======
+This is some File. Added a new line. One more change added.
+>>>>>>> 270e75437f44660e282a109a98f716a5edbb6061
