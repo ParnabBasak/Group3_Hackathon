@@ -8,26 +8,26 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 
 ## Task List
 
-| Task |	Layer |	Assigned | Status |
-| --- | --- | --- | --- |
-|Database | Creation|	DB| |	
-|Prepare Test Data|	DB| | |	
-|Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| |
-|Admin Page - UI|	Angular|	Balaji| |
-|Admin Page - Serv|	Node| | |	
-|Admin Page - Serv|	Python|	Parnab| |
-|Forecast Page - Search Section-UI|	Angular|	George| |
-|Forecast Page - Search Section-Services|	Node|	Bharti| |
-|Forecast Page - Result Section-UI|	Angular|	Bala| |
-|Forecast Page - Search Section-Services|	Node|	Praveen| |
-|Forecast Page - Graph Section-UI|	Angular| | |	
-|Forecast Page - Graph Section-Services|	Node| |	
-|Error Page|	Angular|	Balaji| |
-|End to End Integration|	All Layers| | |	
-|Test Scripts - UI + Code coverage|	Angular| | |	
-|Test Scripts - Service + Code coverage|	Node| | |	
-|Documentation|	All Layers| | |	
-|Enhance Look & Feel|	Angular| | |	
+| Task |	Layer |	Assigned | Status | Comments |
+| --- | --- | --- | --- | --- |
+|Database | Creation|	DB| Parnab | Done | Refer to the Mongo_DB folder|	
+|Prepare Test Data|	DB| | |	|
+|Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| | |
+|Admin Page - UI|	Angular|	Balaji| | |
+|Admin Page - Serv|	Node| | | |	
+|Admin Page - Serv|	Python|	Parnab| | |
+|Forecast Page - Search Section-UI|	Angular|	George| | |
+|Forecast Page - Search Section-Services|	Node|	Bharti| | |
+|Forecast Page - Result Section-UI|	Angular|	Bala| | |
+|Forecast Page - Search Section-Services|	Node|	Praveen| | |
+|Forecast Page - Graph Section-UI|	Angular| | | |
+|Forecast Page - Graph Section-Services|	Node| | |	
+|Error Page|	Angular|	Balaji| | |
+|End to End Integration|	All Layers| | | |	
+|Test Scripts - UI + Code coverage|	Angular| | | |
+|Test Scripts - Service + Code coverage|	Node| | | |
+|Documentation|	All Layers| | | |
+|Enhance Look & Feel|	Angular| | | |	
 
 ## Getting Started
 
