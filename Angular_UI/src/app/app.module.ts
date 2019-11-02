@@ -9,11 +9,16 @@ import { SigninComponent } from './components/login/signin/signin.component';
 import { SignupComponent } from './components/login/signup/signup.component';
 import { HeaderComponent } from './components/shared/header/header.component';
 import { FooterComponent } from './components/shared/footer/footer.component';
+import { HomeComponent } from './components/home/home.component';
+import { DashboardComponent } from './components/core/dashboard/dashboard.component'
+import { ROUTES } from  './app.routing';
 
-const appRoutes: Routes = [
-  { path: 'signin', component: SigninComponent },
-  { path: 'signup', component: SignupComponent },
-];
+// const appRoutes: Routes = [
+//   { path: '', component: HomeComponent },
+//   { path: 'signin', component: SigninComponent },
+//   { path: 'signup', component: SignupComponent },
+//   { path: 'dashboard', component: DashboardComponent },
+// ];
 
 @NgModule({
   declarations: [
@@ -22,15 +27,14 @@ const appRoutes: Routes = [
     SignupComponent,
     HeaderComponent,
     FooterComponent,
+    HomeComponent,
+    DashboardComponent
   ],
   imports: [
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
-    RouterModule.forRoot(
-      appRoutes,
-      { enableTracing: false } // <-- debugging purposes only
-    ),
+    ROUTES,
     MDBBootstrapModule.forRoot()
   ],
   providers: [],
