@@ -6,6 +6,29 @@ This is the master repository for the Timeseries Forecasting Hackathon Case Stud
 
 Refer to the detailed architecture and assumptions in the presentation as available in the architecture subfolder.
 
+## Task List
+
+| Task |	Layer |	Assigned | Status |
+| --- | --- | --- | |
+|Database | Creation|	DB| |	
+|Prepare Test Data|	DB| | |	
+|Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| |
+|Admin Page - UI|	Angular|	Balaji| |
+|Admin Page - Serv|	Node| | |	
+|Admin Page - Serv|	Python|	Parnab| |
+|Forecast Page - Search Section-UI|	Angular|	George| |
+|Forecast Page - Search Section-Services|	Node|	Bharti| |
+|Forecast Page - Result Section-UI|	Angular|	Bala| |
+|Forecast Page - Search Section-Services|	Node|	Praveen| |
+|Forecast Page - Graph Section-UI|	Angular| | |	
+|Forecast Page - Graph Section-Services|	Node| |	
+|Error Page|	Angular|	Balaji| |
+|End to End Integration|	All Layers| | |	
+|Test Scripts - UI + Code coverage|	Angular| | |	
+|Test Scripts - Service + Code coverage|	Node| | |	
+|Documentation|	All Layers| | |	
+|Enhance Look & Feel|	Angular| | |	
+
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
