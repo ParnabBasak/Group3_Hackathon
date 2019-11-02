@@ -1,17 +1,17 @@
 # MongoDB Design
 
-This section outlines the Mongo DB table desing
+This section outlines the Mongo DB table design
 
 ## DB Model 
-
+The folowing collections have been created in database **Forecast**
 ```
-Document Name: Channels
+Collection Name: Channels
 {
     "ChannelId": "DSO", 
     "ChannelName": "Direct Store Order"
 }
 
-Document Name: SalesHistory
+Collection Name: SalesHistory
 {
     "Channel": "DSO", 
     "SaleDate": Date("2013-08-07"), 
@@ -20,7 +20,7 @@ Document Name: SalesHistory
     "Quantity": 50
 }
 
-Document Name: SalesHistory
+Collection Name: SalesHistory
 {
     "Channel": "DSO", 
     "SaleDate": Date("2022-08-07"), 
