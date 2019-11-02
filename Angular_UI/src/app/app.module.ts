@@ -12,13 +12,8 @@ import { FooterComponent } from './components/shared/footer/footer.component';
 import { HomeComponent } from './components/home/home.component';
 import { DashboardComponent } from './components/core/dashboard/dashboard.component'
 import { ROUTES } from  './app.routing';
-
-// const appRoutes: Routes = [
-//   { path: '', component: HomeComponent },
-//   { path: 'signin', component: SigninComponent },
-//   { path: 'signup', component: SignupComponent },
-//   { path: 'dashboard', component: DashboardComponent },
-// ];
+import { AdminComponent } from './components/core/admin/admin.component';
+import { ForecastComponent } from './components/core/forecast/forecast.component';
 
 @NgModule({
   declarations: [
@@ -28,7 +23,9 @@ import { ROUTES } from  './app.routing';
     HeaderComponent,
     FooterComponent,
     HomeComponent,
-    DashboardComponent
+    DashboardComponent,
+    AdminComponent,
+    ForecastComponent
   ],
   imports: [
     BrowserModule,
