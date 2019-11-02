@@ -4,7 +4,31 @@ This section outlines the Mongo DB table desing
 
 ## DB Model 
 
-Refer to the detailed architecture and assumptions in the presentation as available in the architecture subfolder.
+```
+Document Name: Channels
+{
+    "ChannelId": "DSO", 
+    "ChannelName": "Direct Store Order"
+}
+
+Document Name: SalesHistory
+{
+    "Channel": "DSO", 
+    "SaleDate": Date("2013-08-07"), 
+    "Product": "Brand A1 - Phone", 
+    "Attribute": "Net Unit", 
+    "Quantity": 50
+}
+
+Document Name: SalesHistory
+{
+    "Channel": "DSO", 
+    "SaleDate": Date("2022-08-07"), 
+    "Product": "Brand A1 - Phone", 
+    "Attribute": "Net Unit", 
+    "Quantity": 150
+}
+```
 
 ## Data Seed Scripts
 
