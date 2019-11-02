@@ -10,7 +10,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 
 | Task |	Layer |	Assigned | Status | Comments |
 | --- | --- | --- | --- | --- |
-|Database | Creation|	DB| Parnab | Done | Refer to the Mongo_DB folder|	
+|Database Creation|	DB| Parnab | Done | Refer to the Mongo_DB folder|	
 |Prepare Test Data|	DB| | |	|
 |Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| | |
 |Admin Page - UI|	Angular|	Balaji| | |
