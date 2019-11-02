@@ -41,7 +41,10 @@ These instructions will get you a copy of the project up and running on your loc
 
 ### Installing
 
-Visit respective folder for detailed step by step documentation for the individual layers.
+1. Create a new mongo DB instance called **Forecast**. Follow the scripts in as outlined in Mongo_DB folder to create the DB instance
+2. Run the node module by following the instructions in Node_Services folder
+3. Run the Angular app by following the instructions in Angular_UI folder
+4. Navigate to the UI frontend via url http://localhost:4200
 
 ## Running the tests
 

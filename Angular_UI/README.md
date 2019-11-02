@@ -1,10 +1,17 @@
-# MdbAngularFree
+# ForecastAngular
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0-rc.5.
 
+## Local Install
+
+1. Clone the repository in local
+2. Run npm install in the Angular_UI directory
+3. Run npm start
+4. View the app via url http://localhost:4200/
+
 ## Development server
 
-Run `ng serve mdb-angular-free` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
+Run `ng serve ForecastAngular` for a dev server. Navigate to `http://localhost:4200/`. The app will automatically reload if you change any of the source files.
 
 ## Demo application
 
