@@ -1,4 +1,4 @@
-# Project Title
+# Hackathon Timeseries Forecasting - Team 3
 
 This is the master repository for the Timeseries Forecasting Hackathon Case Study
 
