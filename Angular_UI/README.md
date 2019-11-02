@@ -2,7 +2,7 @@
 
 This project was generated with [Angular CLI](https://github.com/angular/angular-cli) version 6.0.0-rc.5.
 
-## Local Install
+## Local Instal
 
 1. Clone the repository in local
 2. Run npm install in the Angular_UI directory
