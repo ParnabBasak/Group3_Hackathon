@@ -8,7 +8,6 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 
 ## Task List
 
-
 | Task |	Layer |	Assigned | Status |
 | --- | --- | --- | --- |
 |Database | Creation|	DB| |	
