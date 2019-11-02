@@ -10,7 +10,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 
 
 | Task |	Layer |	Assigned | Status |
-| --- | --- | --- | |
+| --- | --- | --- | --- |
 |Database | Creation|	DB| |	
 |Prepare Test Data|	DB| | |	
 |Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| |
