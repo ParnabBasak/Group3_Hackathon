@@ -41,7 +41,10 @@ Create new Database in Mongo called Forecast
 //Creates a new DB
 use Forecast
 
-//Creates Channel Master
+//Creates Users
+db.Users.insert({"fullName" :"Parnab Basak", "email": "a@a.com", "password": "aaaaaaaa", "saltSecret":"secret","type":"ADMIN"});
+
+//Creates Channel (Master)
 db.Channels.insert({"ChannelId": "DSO", "ChannelName": "Direct Store Order"})
 db.Channels.insert({"ChannelId": "DOS", "ChannelName": "Direct Online Sales"})
 db.Channels.insert({"ChannelId": "PHO", "ChannelName": "Phone Order"})
