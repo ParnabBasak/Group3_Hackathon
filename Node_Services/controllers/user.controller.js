@@ -5,7 +5,8 @@ var User = require('../models/user.model');
 
 module.exports.register = (req, res, next) => {
     var user = new User();
-    user.fullName = req.body.fullName;
+    user.firstName = req.body.firstName;
+    user.lastName = req.body.lastName;
     user.email = req.body.email;
     user.password = req.body.password;
     user.role = req.body.role;

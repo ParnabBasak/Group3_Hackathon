@@ -3,6 +3,8 @@ import { NgModule, NO_ERRORS_SCHEMA } from '@angular/core';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { FormsModule }          from '@angular/forms';
 import { RouterModule, Routes } from '@angular/router';
+import { HttpClientModule,HTTP_INTERCEPTORS } from '@angular/common/http';
+
 import { AppComponent } from './app.component';
 import { MDBBootstrapModule } from 'angular-bootstrap-md';
 import { SigninComponent } from './components/login/signin/signin.component';
@@ -33,6 +35,7 @@ import { ErrorComponent } from './components/shared/error/error.component';
     BrowserModule,
     BrowserAnimationsModule,
     FormsModule,
+    HttpClientModule,
     ROUTES,
     MDBBootstrapModule.forRoot()
   ],
