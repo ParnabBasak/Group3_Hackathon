@@ -10,6 +10,7 @@ const cors = require('cors');
 
 var mongoose = require('mongoose');
 require('dotenv').config();
+require('./config/passportConfig');
 
 const rtsIndex = require('./routes/index.router');
 

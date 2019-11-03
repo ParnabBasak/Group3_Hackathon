@@ -1,4 +1,14 @@
 <div class="row" style="padding-top: 10px;padding-bottom: 20px;">
+    <!-- Error message -->
+    <div class="col-lg-4 offset-4 col-md-12">
+        <div class="alert alert-warning alert-dismissible fade show" role="alert" *ngIf="serverErrorMessages">
+            <strong>OOPS!</strong> {{serverErrorMessages}}
+            <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                <span aria-hidden="true">&times;</span>
+            </button>
+        </div>
+    </div>
+
     <!-- Grid column -->
     <div class="col-lg-4 offset-4 col-md-12">
         <!-- Material form register -->
@@ -15,8 +25,9 @@
                     (ngSubmit)="signUpForm.valid && onSubmit(signUpForm)">
 
                     <div class="md-form">
-                       <label for="role" class="control-label"> Role </label>
-                        <select class="browser-default custom-select" name="role" [(ngModel)]="authService.selectedUser.role">
+                        <label for="role" class="control-label"> Role </label>
+                        <select class="browser-default custom-select" name="role"
+                            [(ngModel)]="authService.selectedUser.role">
                             <option *ngFor="let role of roles" [value]="role.code">{{role.value}}</option>
                         </select>
                     </div>

@@ -17,6 +17,7 @@ import { ROUTES } from  './app.routing';
 import { AdminComponent } from './components/core/admin/admin.component';
 import { ForecastComponent } from './components/core/forecast/forecast.component';
 import { ErrorComponent } from './components/shared/error/error.component';
+import { AuthInterceptor } from './services/auth/auth.interceptor';
 
 @NgModule({
   declarations: [
@@ -39,7 +40,11 @@ import { ErrorComponent } from './components/shared/error/error.component';
     ROUTES,
     MDBBootstrapModule.forRoot()
   ],
-  providers: [],
+  providers: [{
+    provide: HTTP_INTERCEPTORS,
+    useClass: AuthInterceptor,
+    multi: true
+  }],
   bootstrap: [AppComponent],
   schemas: [ NO_ERRORS_SCHEMA ]
 })

@@ -1,5 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from '@angular/forms';
+import { Router } from "@angular/router";
+
 import { AuthService } from '../../../services/auth/auth.service';
 
 @Component({
@@ -17,7 +19,7 @@ export class SignupComponent implements OnInit {
     {code: "GENERAL", value: "General"}
   ];
 
-  constructor(private authService: AuthService) { }
+  constructor(private authService: AuthService, private router: Router) { }
 
   ngOnInit() {
   }
@@ -26,8 +28,9 @@ export class SignupComponent implements OnInit {
     this.authService.signupUser(form.value).subscribe(
       res => {
         this.showSucessMessage = true;
-        this.authService.login(true);
+        this.authService.loggedIn.next(true);
         this.resetForm(form);
+        this.router.navigateByUrl('/signin');
       },
       err => {
         if (err.status === 422) {

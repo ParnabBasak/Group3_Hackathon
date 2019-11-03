@@ -19,7 +19,7 @@ export class AuthService {
     role: ''
   };
 
-  private loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
 
   get isLoggedIn() {
     return this.loggedIn.asObservable();
@@ -33,15 +33,26 @@ export class AuthService {
     return this.http.post(environment.apiBaseUrl+'/register',user,this.noAuthHeader);
   }
 
-  login(indicator: boolean) {
-    if (indicator) {
-      this.loggedIn.next(true);
-      this.router.navigate(['/dashboard']);
-    }
+  login(authCredentials) {
+    return this.http.post(environment.apiBaseUrl + '/authenticate', authCredentials, this.noAuthHeader);
   }
 
   logout() {
     this.loggedIn.next(false);
+    this.deleteToken();
     this.router.navigate(['/signin']);
+  }
+
+  //Helper Methods
+  setToken(token: string) {
+    localStorage.setItem('token', token);
+  }
+
+  getToken() {
+    return localStorage.getItem('token');
+  }
+
+  deleteToken() {
+    localStorage.removeItem('token');
   }
 }
