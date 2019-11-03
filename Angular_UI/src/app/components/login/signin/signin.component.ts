@@ -30,7 +30,6 @@ export class SigninComponent implements OnInit {
       res => {
         this.authService.setToken(res['token']);
         this.authService.loggedIn.next(true);
-        //this.router.navigateByUrl('/userprofile');
         this.router.navigateByUrl('/dashboard');
       },
       err => {
