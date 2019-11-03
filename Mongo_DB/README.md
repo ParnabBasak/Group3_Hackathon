@@ -5,13 +5,22 @@ This section outlines the Mongo DB table design
 ## DB Model 
 The folowing collections have been created in database **Forecast**
 ```
-Collection Name: Channels
+Collection Name: users
+{
+    "fullName" :"First Last",
+    "email": "a@a.com", 
+    "password": "aaaaaaaa", 
+    "saltSecret":"secret",
+    "role":"ADMIN"
+}
+
+Collection Name: channels
 {
     "ChannelId": "DSO", 
     "ChannelName": "Direct Store Order"
 }
 
-Collection Name: SalesHistory
+Collection Name: saleshistory
 {
     "Channel": "DSO", 
     "SaleDate": Date("2013-08-07"), 
@@ -20,7 +29,7 @@ Collection Name: SalesHistory
     "Quantity": 50
 }
 
-Collection Name: SalesHistory
+Collection Name: salesforecast
 {
     "Channel": "DSO", 
     "SaleDate": Date("2022-08-07"), 
@@ -42,25 +51,25 @@ Create new Database in Mongo called Forecast
 use Forecast
 
 //Creates Users
-db.Users.insert({"fullName" :"Parnab Basak", "email": "a@a.com", "password": "aaaaaaaa", "saltSecret":"secret","type":"ADMIN"});
+db.users.insert({"fullName" :"Parnab Basak", "email": "a@a.com", "password": "aaaaaaaa", "saltSecret":"secret","role":"ADMIN"});
 
 //Creates Channel (Master)
-db.Channels.insert({"ChannelId": "DSO", "ChannelName": "Direct Store Order"})
-db.Channels.insert({"ChannelId": "DOS", "ChannelName": "Direct Online Sales"})
-db.Channels.insert({"ChannelId": "PHO", "ChannelName": "Phone Order"})
+db.channels.insert({"ChannelId": "DSO", "ChannelName": "Direct Store Order"})
+db.channels.insert({"ChannelId": "DOS", "ChannelName": "Direct Online Sales"})
+db.channels.insert({"ChannelId": "PHO", "ChannelName": "Phone Order"})
 
 
 //Creates SalesHistory
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 50})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Forecasting Methodology", "Quantity": 51})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Last Year", "Quantity": 52})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Year Over Year", "Quantity": 53})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Week Over Year", "Quantity": 54})
+db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 50})
+db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Forecasting Methodology", "Quantity": 51})
+db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Last Year", "Quantity": 52})
+db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Year Over Year", "Quantity": 53})
+db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Week Over Year", "Quantity": 54})
 
 //Creates SalesForecast
-db.SalesForecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 150})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "ARIMA", "Quantity": 151})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Last Year", "Quantity": 152})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Year Over Year", "Quantity": 153})
-db.SalesHistory.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Week Over Year", "Quantity": 154})
+db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 150})
+db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "ARIMA", "Quantity": 151})
+db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Last Year", "Quantity": 152})
+db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Year Over Year", "Quantity": 153})
+db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Week Over Year", "Quantity": 154})
 ```

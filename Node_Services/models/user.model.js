@@ -18,7 +18,7 @@ var userSchema = new mongoose.Schema({
         minlength: [4, 'Password must be atleast 4 character long']
     },
     saltSecret: String,
-    type: String
+    role: String
 });
 
 // Custom validation for email
