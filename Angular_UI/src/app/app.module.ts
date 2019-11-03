@@ -14,6 +14,7 @@ import { DashboardComponent } from './components/core/dashboard/dashboard.compon
 import { ROUTES } from  './app.routing';
 import { AdminComponent } from './components/core/admin/admin.component';
 import { ForecastComponent } from './components/core/forecast/forecast.component';
+import { ErrorComponent } from './components/shared/error/error.component';
 
 @NgModule({
   declarations: [
@@ -25,7 +26,8 @@ import { ForecastComponent } from './components/core/forecast/forecast.component
     HomeComponent,
     DashboardComponent,
     AdminComponent,
-    ForecastComponent
+    ForecastComponent,
+    ErrorComponent
   ],
   imports: [
     BrowserModule,
