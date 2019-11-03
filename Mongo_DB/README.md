@@ -7,7 +7,8 @@ The folowing collections have been created in database **Forecast**
 ```
 Collection Name: users
 {
-    "fullName" :"First Last",
+    "firstName" :"First Name",
+    "firstName":"Last Name",
     "email": "a@a.com", 
     "password": "aaaaaaaa", 
     "saltSecret":"secret",
@@ -47,11 +48,12 @@ Open a MongoDB shell and run the following scripts
 Create new Database in Mongo called Forecast
 --------------------------------------------
 
-//Creates a new DB
+//Creates a new DB called Forecast
 use Forecast
 
 //Creates Users
-db.users.insert({"fullName" :"Parnab Basak", "email": "a@a.com", "password": "aaaaaaaa", "saltSecret":"secret","role":"ADMIN"});
+db.users.insert({"firstName" :"John", "lastName" :"Smith", "email": "John.Smith@tcs.com", "password": "password", "saltSecret":"secret","role":"ADMIN"})
+db.users.insert({"firstName" :"Mary", "lastName" :"Smith", "email": "Mary.Smith@tcs.com", "password": "password", "saltSecret":"secret","role":"GENERAL"})
 
 //Creates Channel (Master)
 db.channels.insert({"ChannelId": "DSO", "ChannelName": "Direct Store Order"})
