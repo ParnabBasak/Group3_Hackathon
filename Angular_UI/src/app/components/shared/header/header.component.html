@@ -1,0 +1,38 @@
+<!-- <nav class="mb-1 navbar navbar-expand-lg navbar-dark primary-color">
+    <a class="navbar-brand" href="#"><strong>Retail Forecast</strong></a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent-333"
+        aria-controls="navbarSupportedContent-333" aria-expanded="false" aria-label="Toggle navigation">
+        <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent-333">
+        <ul class="navbar-nav mr-auto">
+
+            <li class="nav-item active" *ngIf="isLoggedIn$ | async as isLoggedIn">
+                <a class="nav-link" routerLink="/admin" routerLinkActive="active">Admin
+                </a>
+            </li>
+            <li class="nav-item" *ngIf="isLoggedIn$ | async as isLoggedIn">
+                <a class="nav-link" routerLink="/forecast" routerLinkActive="active">Forecast</a>
+            </li>
+        </ul>
+        <ul class="navbar-nav ml-auto nav-flex-icons">
+            <li class="nav-item" *ngIf="isLoggedIn$ | async as isLoggedIn">
+                <a class="nav-link" (click)="onLogout()" routerLinkActive="active" routerLink="/logout">Logout</a>
+            </li>
+        </ul>
+    </div>
+</nav> -->
+
+<!-- AM Toolbar -->
+<mat-toolbar color="primary" class="app-header">
+  <div><a href="https://www.tcs.com" target="_blank" class="positronx">Forecast</a></div>
+  <span class="nav-tool-items">
+    <a mat-button routerLink="/admin" routerLinkActive="active" *ngIf="isLoggedIn$ | async as isLoggedIn">Admin</a> 
+    <a mat-button routerLink="/forecast" routerLinkActive="active" *ngIf="isLoggedIn$ | async as isLoggedIn">Forecast</a> 
+    <a mat-button mat-raised-button routerLink="/logout" routerLinkActive="active" (click)="onLogout()" *ngIf="isLoggedIn$ | async as isLoggedIn else loggedOut">Logout</a> 
+    <ng-template #loggedOut>
+            <a mat-button routerLink="/signin" routerLinkActive="active">Log in</a>
+            <a mat-button mat-raised-button routerLink="/signup" routerLinkActive="active">Sign up</a>    
+    </ng-template>
+  </span>
+</mat-toolbar>
