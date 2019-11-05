@@ -21,6 +21,9 @@ import { ToastrModule } from 'ngx-toastr';
 /* Angular Flex Layout */
 import { FlexLayoutModule } from "@angular/flex-layout";
 
+/* File Upload */
+import { FileSelectDirective } from 'ng2-file-upload';
+
 /* Components */
 import { SigninComponent } from './components/login/signin/signin.component';
 import { SignupComponent } from './components/login/signup/signup.component';
@@ -47,7 +50,8 @@ import { ROUTES } from  './app.routing';
     DashboardComponent,
     AdminComponent,
     ForecastComponent,
-    ErrorComponent
+    ErrorComponent,
+    FileSelectDirective
   ],
   imports: [
     BrowserModule,
