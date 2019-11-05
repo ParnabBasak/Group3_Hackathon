@@ -28,8 +28,8 @@ export class SigninComponent implements OnInit {
       res => {
         this.authService.setToken(res['token']);
         this.authService.loggedIn.next(true);
-        this.authService.loggedInUser.next(res.user);
-        //sessionStorage.setItem('loggedUser', res.user.firstName + ' '+ res.user.lastName);
+        this.authService.loggedInUser.next(res['user']);
+        sessionStorage.setItem('loggedUser', res['user'].firstName + ' '+ res['user'].lastName);
         this.router.navigateByUrl('/dashboard');
       },
       err => {

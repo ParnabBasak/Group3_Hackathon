@@ -12,9 +12,7 @@
                     <input matInput type="text" #firstName="ngModel" [(ngModel)]="authService.selectedUser.firstName"
                         name="firstName" placeholder="First Name" required
                         [ngClass]="{'invalid-textbox' :signUpForm.submitted && !firstName.valid }" class="form-control">
-                    <div *ngIf="signUpForm.submitted && !firstName.valid">
-                        <label class="validation-message">This field is required.</label>
-                    </div>
+                    <mat-error *ngIf="signUpForm.submitted && !firstName.valid">This field is required.</mat-error>
                 </mat-form-field>
 
                 <!-- Last name -->
@@ -22,9 +20,7 @@
                     <input matInput type="text" #lastName="ngModel" [(ngModel)]="authService.selectedUser.lastName"
                         name="lastName" placeholder="Last Name" required
                         [ngClass]="{'invalid-textbox' :signUpForm.submitted && !lastName.valid }" class="form-control">
-                    <div *ngIf="signUpForm.submitted && !lastName.valid">
-                        <label class="validation-message">This field is required.</label>
-                    </div>
+                    <mat-error *ngIf="signUpForm.submitted && !lastName.valid">This field is required.</mat-error>
                 </mat-form-field>
 
                 <!-- E-mail -->
@@ -32,37 +28,29 @@
                     <input matInput type="text" #email="ngModel" [(ngModel)]="authService.selectedUser.email"
                         name="email" placeholder="Email" required [pattern]="emailRegex"
                         [ngClass]="{'invalid-textbox' :signUpForm.submitted && !email.valid }" class="form-control">
-                    <div *ngIf="signUpForm.submitted && email.errors">
-                        <label *ngIf="email.errors.required" class="validation-message">This field is
-                            required.</label>
-                        <label *ngIf="email.errors.pattern" class="validation-message">Invalid email
-                            address.</label>
-                    </div>
+                        <mat-error *ngIf="signUpForm.submitted && email.errors && email.errors.required">This field is required.</mat-error>
+                        <mat-error *ngIf="signUpForm.submitted && email.errors && email.errors.pattern">Invalid email address.</mat-error>
                     <mat-hint>A valid email address</mat-hint>
                 </mat-form-field>
 
                 <!-- Password -->
                 <mat-form-field class="example-full-width">
-                        <input matInput type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password"
+                    <input matInput type="password" #password="ngModel" [(ngModel)]="authService.selectedUser.password"
                         name="password" placeholder="Password" minlength="4" required
-                        [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }"
-                        class="form-control">
-                    <div *ngIf="signUpForm.submitted && password.errors">
-                        <label *ngIf="password.errors.required" class="validation-message">This field is
-                            required.</label>
-                        <label *ngIf="password.errors.minlength" class="validation-message">Enter atleast 4
-                            characters.</label>
-                    </div>
+                        [ngClass]="{'invalid-textbox' :signUpForm.submitted && !password.valid }" class="form-control">
+                        <mat-error *ngIf="signUpForm.submitted && password.errors && password.errors.required">This field is required.</mat-error>
+                        <mat-error *ngIf="signUpForm.submitted && password.errors && password.errors.minlength">Enter atleast 4 characters.</mat-error>
                     <mat-hint>At least 4 characters</mat-hint>
                 </mat-form-field>
 
                 <mat-form-field class="example-full-width">
                     <mat-label>Choose a role...</mat-label>
-                    <mat-select [(ngModel)]="authService.selectedUser.role" name="role">
+                    <mat-select matInput [(ngModel)]="authService.selectedUser.role" name="role" required >
                         <mat-option [value]="role.code" *ngFor="let role of roles">{{role.value}}
                         </mat-option>
                     </mat-select>
-                </mat-form-field>   
+                    <!-- <mat-error *ngIf="signUpForm.submitted && role.errors.required">This field is required.</mat-error> -->
+                </mat-form-field>
 
             </mat-card-content>
 
