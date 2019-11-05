@@ -21,13 +21,13 @@ Collection Name: channels
     "ChannelName": "Direct Store Order"
 }
 
-Collection Name: saleshistory
+Collection Name: saleshistories
 {
-    "Channel": "DSO", 
-    "SaleDate": Date("2013-08-07"), 
-    "Product": "Brand A1 - Phone", 
-    "Attribute": "Net Unit", 
-    "Quantity": 50
+    "channel": "DSO", 
+    "saleDate": Date("2013-08-07"), 
+    "product": "Brand A1 - Phone", 
+    "attribute": "Net Unit", 
+    "quantity": 50
 }
 
 Collection Name: salesforecast
@@ -61,12 +61,12 @@ db.channels.insert({"ChannelId": "DOS", "ChannelName": "Direct Online Sales"})
 db.channels.insert({"ChannelId": "PHO", "ChannelName": "Phone Order"})
 
 
-//Creates SalesHistory
-db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 50})
-db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Forecasting Methodology", "Quantity": 51})
-db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Last Year", "Quantity": 52})
-db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Year Over Year", "Quantity": 53})
-db.saleshistory.insert({"Channel": "DSO", "SaleDate": Date("2013-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Week Over Year", "Quantity": 54})
+//Creates SalesHistories
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "product": "Brand A1 - Phone", "attribute": "Net Unit", "quantity": 50})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "product": "Brand A1 - Phone", "attribute": "Forecasting Methodology", "Quantity": 51})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "product": "Brand A1 - Phone", "attribute": "Last Year", "quantity": 52})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "product": "Brand A1 - Phone", "attribute": "Year Over Year", "quantity": 53})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "product": "Brand A1 - Phone", "attribute": "Week Over Year", "quantity": 54})
 
 //Creates SalesForecast
 db.salesforecast.insert({"Channel": "DSO", "SaleDate": Date("2022-08-07"), "Product": "Brand A1 - Phone", "Attribute": "Net Unit", "Quantity": 150})
