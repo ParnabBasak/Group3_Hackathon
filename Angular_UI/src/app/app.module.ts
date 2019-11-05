@@ -36,7 +36,6 @@ import { AuthInterceptor } from './services/auth/auth.interceptor';
 /* Routing */
 import { ROUTES } from  './app.routing';
 
-
 @NgModule({
   declarations: [
     AppComponent,

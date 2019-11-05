@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { NgForm } from "@angular/forms";
 import { Router } from "@angular/router";
+import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../../../services/auth/auth.service';
 
@@ -18,7 +19,7 @@ export class SigninComponent implements OnInit {
   emailRegex = /^(([^<>()\[\]\\.,;:\s@"]+(\.[^<>()\[\]\\.,;:\s@"]+)*)|(".+"))@((\[[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\.[0-9]{1,3}\])|(([a-zA-Z\-0-9]+\.)+[a-zA-Z]{2,}))$/;
   serverErrorMessages: string;
 
-  constructor(private authService: AuthService, private router: Router) { }
+  constructor(private authService: AuthService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
   }
@@ -33,7 +34,9 @@ export class SigninComponent implements OnInit {
         this.router.navigateByUrl('/dashboard');
       },
       err => {
-        this.serverErrorMessages = err.error.message;
+        this.toastr.error(err.error.message, 'OOPS!', {
+          positionClass: 'toast-top-center' 
+       });
       }
     );
   }
