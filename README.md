@@ -19,7 +19,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Forecast Page - Search Section-UI|	Angular|	George| | |
 |Forecast Page - Search Section-Services|	Node|	Bharti| | |
 |Forecast Page - Result Section-UI|	Angular|	Bala| | |
-|Forecast Page - Search Section-Services|	Node|	Praveen| | |
+|Forecast Page - Result Section-Services|	Node|	Praveen| | |
 |Forecast Page - Graph Section-UI|	Angular| John| | |
 |Forecast Page - Graph Section-Services|	Node| | |	
 |Error Page|	Angular|	Balaji| | |
