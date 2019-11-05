@@ -20,6 +20,7 @@ export class AuthService {
   };
 
   loggedIn: BehaviorSubject<boolean> = new BehaviorSubject<boolean>(false);
+  loggedInUser: BehaviorSubject<User> = new BehaviorSubject<User>(new User());
 
   get isLoggedIn() {
     return this.loggedIn.asObservable();

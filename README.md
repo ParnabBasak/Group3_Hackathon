@@ -20,7 +20,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Forecast Page - Search Section-Services|	Node|	Bharti| | |
 |Forecast Page - Result Section-UI|	Angular|	Bala| | |
 |Forecast Page - Search Section-Services|	Node|	Praveen| | |
-|Forecast Page - Graph Section-UI|	Angular| | | |
+|Forecast Page - Graph Section-UI|	Angular| John| | |
 |Forecast Page - Graph Section-Services|	Node| | |	
 |Error Page|	Angular|	Balaji| | |
 |End to End Integration|	All Layers| | | |	

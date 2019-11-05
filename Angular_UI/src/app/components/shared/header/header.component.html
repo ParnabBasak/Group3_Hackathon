@@ -27,8 +27,10 @@
 <mat-toolbar color="primary" class="app-header">
   <div><a href="https://www.tcs.com" target="_blank" class="positronx">Forecast</a></div>
   <span class="nav-tool-items">
-    <a mat-button routerLink="/admin" routerLinkActive="active" *ngIf="isLoggedIn$ | async as isLoggedIn">Admin</a> 
+
+    <a mat-button routerLink="/admin" routerLinkActive="active" *ngIf="(isLoggedIn$ | async) && userRole === 'ADMIN' as isLoggedIn">Admin</a> 
     <a mat-button routerLink="/forecast" routerLinkActive="active" *ngIf="isLoggedIn$ | async as isLoggedIn">Forecast</a> 
+    <span>{{ userDisplayName}}</span>
     <a mat-button mat-raised-button routerLink="/logout" routerLinkActive="active" (click)="onLogout()" *ngIf="isLoggedIn$ | async as isLoggedIn else loggedOut">Logout</a> 
     <ng-template #loggedOut>
             <a mat-button routerLink="/signin" routerLinkActive="active">Log in</a>

@@ -24,12 +24,12 @@ export class SigninComponent implements OnInit {
   }
 
   onSubmit(form: NgForm) {
-    //this.authService.login(true);
-
     this.authService.login(form.value).subscribe(
       res => {
         this.authService.setToken(res['token']);
         this.authService.loggedIn.next(true);
+        this.authService.loggedInUser.next(res.user);
+        //sessionStorage.setItem('loggedUser', res.user.firstName + ' '+ res.user.lastName);
         this.router.navigateByUrl('/dashboard');
       },
       err => {
