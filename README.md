@@ -14,7 +14,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Prepare Test Data|	DB| | |	|
 |Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| | |
 |Admin Page - UI|	Angular|	Balaji| | |
-|Admin Page - Serv|	Node| | | |	
+|Admin Page - Serv|	Node| Parnab |Done | Refer the file controller/upload.controller.js |	
 |Admin Page - Serv|	Python|	Parnab| | |
 |Forecast Page - Search Section-UI|	Angular|	George| | |
 |Forecast Page - Search Section-Services|	Node|	Bharti| | |
