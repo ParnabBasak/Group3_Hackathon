@@ -21,7 +21,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Forecast Page - Result Section-UI|	Angular|	Bala| | |
 |Forecast Page - Result Section-Services|	Node|	Praveen| | |
 |Forecast Page - Graph Section-UI|	Angular| John| | |
-|Forecast Page - Graph Section-Services|	Node| | |	
+|Forecast Page - Graph Section-Services|	Node| Abhijit| |	
 |Error Page|	Angular|	Balaji| | |
 |End to End Integration|	All Layers| | | |	
 |Test Scripts - UI + Code coverage|	Angular| | | |
