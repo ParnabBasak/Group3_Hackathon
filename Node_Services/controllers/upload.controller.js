@@ -46,9 +46,9 @@ async function startUpload(req, res) {
                                     // 1. type_of_script 
                                     // 2. list containing Path of the script 
                                     //    and arguments for the script  
-                                    var process = spawn('python', ["./scripts/hello.py",
-                                        "First",
-                                        "Last"]);
+                                    var pythonCSVfilePath = '/Users/parnabbasak/Documents/workspace/Group3_Hackathon/Node_Services/uploads/' + req.file.filename
+                                    var process = spawn('python3', ["./scripts/forecast.py",
+                                        pythonCSVfilePath]);
 
                                     // Takes stdout data from script which executed 
                                     // with arguments and send this data to res object 
