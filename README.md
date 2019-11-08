@@ -15,7 +15,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| | |
 |Admin Page - UI|	Angular|	Balaji| | |
 |Admin Page - Serv|	Node| Parnab |Done | Refer the file controller/upload.controller.js |	
-|Admin Page - Serv|	Python|	Parnab| | |
+|Admin Page - Serv|	Python|	Parnab|Done |Needs a bit more inscript commeting |
 |Forecast Page - Search Section-UI|	Angular|	George| | |
 |Forecast Page - Search Section-Services|	Node|	Bharti| | |
 |Forecast Page - Result Section-UI|	Angular|	Bala| | |

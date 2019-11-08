@@ -1,16 +1,22 @@
-<div class="login-wrapper" fxLayout="row" fxLayoutAlign="center center">
-  <mat-card class="box">
+<div style="margin:80px" class="login-wrapper" fxLayout="row" fxLayoutAlign="center start">
+  <mat-card class="searchbox" style="max-width: 500px;">
     <mat-card-header>
       <mat-card-title>Admin</mat-card-title>
     </mat-card-header>
-    <div class="container">
-      <input type="file" name="saleshistory" ng2FileSelect [uploader]="uploader" />
-      <button type="button" class="btn btn-success btn-s" 
-        (click)="uploader.uploadAll()" 
-        [disabled]="!uploader.getNotUploadedItems().length" >
-            Upload an Image
-      </button>
-    </div>
+    <mat-card-content>
+      <div class="container">
+        <mat-grid-list cols="2" rowHeight="77">
+          <mat-grid-tile>
+            <input type="file" name="saleshistory" ng2FileSelect [uploader]="uploader" />
+          </mat-grid-tile>
+          <mat-grid-tile>
+            <button type="button" cmat-stroked-button style="width: 150px;" color="accent" class="btn-block"
+              (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
+              Upload an Image
+            </button>
+          </mat-grid-tile>
+        </mat-grid-list>
+      </div>
+    </mat-card-content>
   </mat-card>
 </div>
-
