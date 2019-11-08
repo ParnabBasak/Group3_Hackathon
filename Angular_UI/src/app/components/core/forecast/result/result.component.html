@@ -1,17 +1,74 @@
-<div style="border-style: solid;">
-    <mat-grid-list cols="4">
-        <!-- Products and their Attributes -->
-        <mat-grid-tile>
-            <mat-card>
-                <mat-card-content>
-                    <div style="overflow-x:scroll">
-                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%"
-                            *ngIf="this.temp">
+<mat-card class="boxresult">
+    <mat-card-content>
+        <div>
+            <mat-grid-list cols="4">
+                <!-- Products and their Attributes -->
+                <mat-grid-tile>
+                    <mat-card>
+                        <mat-card-content>
+                            <div style="overflow-x:scroll;border-style: double;">
+                                <table datatable [dtOptions]="dtOptions" class="row-border hover compact cell-border stripe"
+                                    style="width:100%" *ngIf="this.temp">
+                                    <thead>
+                                        <tr>
+                                            <th>UserId1</th>
+                                            <th>Subject1</th>
+                                            <th>Message1</th>
+                                        </tr>
+                                    </thead>
+                                    <tbody>
+                                        <tr *ngFor="let emp of this.empData">
+                                            <td>{{emp.userId}}</td>
+                                            <td>{{emp.title}}</td>
+                                            <td>{{emp.body}}</td>
+                                        </tr>
+                                    </tbody>
+                                </table>
+                            </div>
+                        </mat-card-content>
+                    </mat-card>
+                </mat-grid-tile>
+                <!-- History -->
+                <mat-grid-tile>
+                    <div style="overflow-x:scroll; border-style: double;">
+                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact cell-border stripe"
+                            style="width:100%;" *ngIf="this.temp">
                             <thead>
                                 <tr>
-                                    <th>UserId1</th>
-                                    <th>Subject1</th>
-                                    <th>Message1</th>
+                                    <th>Week1</th>
+                                    <th>Week2</th>
+                                    <th>Week3</th>
+                                    <th>Week4</th>
+                                    <th>Week5</th>
+                                    <th>Week6</th>
+                                    <th>Week7</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let emp of this.empData">
+                                    <td>{{emp.userId}}</td>
+                                    <td>{{emp.title}}</td>
+                                    <td>{{emp.body}}</td>
+                                    <td>{{emp.body}}</td>
+                                    <td>{{emp.body}}</td>
+                                    <td>{{emp.body}}</td>
+                                    <td>{{emp.body}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-grid-tile>
+
+                <!-- Forecast Table-->
+                <mat-grid-tile>
+                    <div style="overflow-x:scroll;border-style: double;">
+                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact cell-border stripe"
+                            style="width:100%" *ngIf="this.temp">
+                            <thead>
+                                <tr>
+                                    <th>Week1</th>
+                                    <th>Week2</th>
+                                    <th>Week3</th>
                                 </tr>
                             </thead>
                             <tbody>
@@ -23,83 +80,30 @@
                             </tbody>
                         </table>
                     </div>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
-        <!-- History -->
-        <mat-grid-tile>
-            <div style="overflow-x:scroll">
-                <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%;"
-                    *ngIf="this.temp">
-                    <thead>
-                        <tr>
-                            <th>UserId2</th>
-                            <th>Subject2</th>
-                            <th>Message2</th>
-                            <th>Message2</th>
-                            <th>Message2</th>
-                            <th>Message2</th>
-                            <th>Message2</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let emp of this.empData">
-                            <td>{{emp.userId}}</td>
-                            <td>{{emp.title}}</td>
-                            <td>{{emp.body}}</td>
-                            <td>{{emp.body}}</td>
-                            <td>{{emp.body}}</td>
-                            <td>{{emp.body}}</td>
-                            <td>{{emp.body}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </mat-grid-tile>
-
-        <!-- Forecast Table-->
-        <mat-grid-tile>
-            <div style="overflow-x:scroll">
-                <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%"
-                    *ngIf="this.temp">
-                    <thead>
-                        <tr>
-                            <th>UserId3</th>
-                            <th>Subject</th>
-                            <th>Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let emp of this.empData">
-                            <td>{{emp.userId}}</td>
-                            <td>{{emp.title}}</td>
-                            <td>{{emp.body}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </mat-grid-tile>
-        <!-- Summary Table -->
-        <mat-grid-tile>
-            <div style="overflow-x:scroll">
-                <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%"
-                    *ngIf="this.temp">
-                    <thead>
-                        <tr>
-                            <th>UserId</th>
-                            <th>Subject</th>
-                            <th>Message</th>
-                        </tr>
-                    </thead>
-                    <tbody>
-                        <tr *ngFor="let emp of this.empData">
-                            <td>{{emp.userId}}</td>
-                            <td>{{emp.title}}</td>
-                            <td>{{emp.body}}</td>
-                        </tr>
-                    </tbody>
-                </table>
-            </div>
-        </mat-grid-tile>
-    </mat-grid-list>
-</div>
+                </mat-grid-tile>
+                <!-- Summary Table -->
+                <mat-grid-tile>
+                    <div style="overflow-x:scroll;border-style: double;">
+                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact cell-border stripe"
+                            style="width:100%" *ngIf="this.temp">
+                            <thead>
+                                <tr>
+                                    <th>Jan</th>
+                                    <th>Feb</th>
+                                    <th>March</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr *ngFor="let emp of this.empData">
+                                    <td>{{emp.userId}}</td>
+                                    <td>{{emp.title}}</td>
+                                    <td>{{emp.body}}</td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </div>
+                </mat-grid-tile>
+            </mat-grid-list>
+        </div>
+    </mat-card-content>
+</mat-card>
