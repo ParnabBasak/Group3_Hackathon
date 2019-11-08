@@ -1,3 +1,5 @@
+const SalesHistory = require('../models/history.model');
+
 exports.getTrend = function(req,res){
     var data = req.body;
     var historyStartDate = new Date(data.historyStartDate);
@@ -6,6 +8,7 @@ exports.getTrend = function(req,res){
     var forecastTrendWeeks = data.forecastTrendWeeks;
     var channel = data.channel;
 
+    SalesHistory.find()
        
 
 }

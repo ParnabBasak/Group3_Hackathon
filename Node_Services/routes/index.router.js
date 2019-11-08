@@ -6,10 +6,15 @@ const path = require('path');
 const ctrlUser = require('../controllers/user.controller');
 const ctrlUpload = require('../controllers/upload.controller');
 const jwtHelper = require('../config/jwtHelper');
+//Added by Abhijit on 11/7 for trend.controller
+const ctrlTrend = require('../controllers/trend.controller');
 
 router.post('/register', ctrlUser.register);
 router.post('/authenticate', ctrlUser.authenticate);
 router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
+
+//Added by Abhijit on 11/7 for trend.controller
+router.post('/gettrend', ctrlTrend.getTrend);
 
 const DIR = './uploads';
 
