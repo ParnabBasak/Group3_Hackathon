@@ -41,7 +41,7 @@ Collection Name: salesforecast
 ```
 
 ## Start MongoDb
-mongod --dbpath /Users/abhijitanand/Desktop/WebDev/Simplilearn/Group3_Hackathon/Mongo_DB/data/db --port 27017 --logpath /Users/abhijitanand/Desktop/WebDev/Simplilearn/Group3_Hackathon/Mongo_DB/data/log --fork
+mongod --dbpath /Users/abhijitanand/Desktop/WebDev/Simplilearn/Group3_Hackathon/Mongo_DB/data/db --port 27017 --logpath /Users/abhijitanand/Desktop/WebDev/Simplilearn/Group3_Hackathon/Mongo_DB/data/log
 
 ## Data Seed Scripts
 

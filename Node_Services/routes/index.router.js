@@ -14,7 +14,7 @@ router.post('/authenticate', ctrlUser.authenticate);
 router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
 
 //Added by Abhijit on 11/7 for trend.controller
-router.post('/gettrend', ctrlTrend.getTrend);
+router.post('/gettrend', ctrlTrend.getTrendController);
 
 const DIR = './uploads';
 
