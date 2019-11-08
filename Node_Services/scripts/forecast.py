@@ -39,7 +39,7 @@ def merge(list1, list2, prod, chn, attr):
     merged_list = []  
     for i in range(0, len(list1)):
         doc_obj = {"channel": chn,
-                 "saleDate": list1[i],
+                 "saleDate": datetime.datetime.strptime(list1[i], '%d/%b/%Y'),
                  "producct": prod,
                  "attribute": attr,
                  "quantity": list2[i]}
