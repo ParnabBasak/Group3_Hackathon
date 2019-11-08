@@ -23,6 +23,7 @@ let storage = multer.diskStorage({
 });
 let upload = multer({ storage: storage });
 
-router.post('/upload', upload.single('saleshistory'), ctrlUpload.upload);
+router.post('/upload', upload.single('saleshistory'), ctrlUpload.upload2);
+//router.post('/upload', ctrlUpload.upload2);
 
 module.exports = router;

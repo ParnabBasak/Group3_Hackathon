@@ -28,6 +28,11 @@ body {
   height: 100%;
 }
 
+.search-wrapper {
+  height: 100%;
+}
+
+
 .positronx {
   text-decoration: none;
   color: #ffffff;
@@ -49,6 +54,21 @@ body {
   max-width: 330px;
 }
 
+.searchbox {
+  position: relative;
+  top: 0;
+  opacity: 1;
+  float: left;
+  padding: 60px 50px 40px 50px;
+  width: 100%;
+  background: #fff;
+  border-radius: 10px;
+  transform: scale(1);
+  -webkit-transform: scale(1);
+  -ms-transform: scale(1);
+  z-index: 5;
+  max-width: 700px;
+}
 .box.back {
   transform: scale(.95);
   -webkit-transform: scale(.95);
@@ -110,3 +130,7 @@ body {
   padding: 0.8375em 0;
 }
 
+div.dataTables_wrapper {
+  width: 800px;
+  margin: 0 auto;
+}

@@ -24,6 +24,9 @@ import { FlexLayoutModule } from "@angular/flex-layout";
 /* File Upload */
 import { FileSelectDirective } from 'ng2-file-upload';
 
+/* Angular Datatables */
+import { DataTablesModule } from 'angular-datatables';
+
 /* Components */
 import { SigninComponent } from './components/login/signin/signin.component';
 import { SignupComponent } from './components/login/signup/signup.component';
@@ -38,6 +41,8 @@ import { AuthInterceptor } from './services/auth/auth.interceptor';
 
 /* Routing */
 import { ROUTES } from  './app.routing';
+import { SearchComponent } from './components/core/forecast/search/search.component';
+import { ResultComponent } from './components/core/forecast/result/result.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +56,9 @@ import { ROUTES } from  './app.routing';
     AdminComponent,
     ForecastComponent,
     ErrorComponent,
-    FileSelectDirective
+    FileSelectDirective,
+    SearchComponent,
+    ResultComponent
   ],
   imports: [
     BrowserModule,
@@ -62,6 +69,7 @@ import { ROUTES } from  './app.routing';
     FlexLayoutModule,
     HttpClientModule,
     ToastrModule.forRoot(),
+    DataTablesModule,
     ROUTES,
   ],
   providers: [{

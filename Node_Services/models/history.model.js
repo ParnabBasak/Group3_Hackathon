@@ -7,7 +7,7 @@ var historySchema = new mongoose.Schema({
     saleDate: {
         type: Date
     },
-    product: {
+    producct: {
         type: String
     },
     attribute: {
