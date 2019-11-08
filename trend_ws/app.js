@@ -19,7 +19,8 @@ app.use(bodyParser.json());
 app.get('/',function(req,res){
     res.send('Default path');
 });
-app.use('/getforecast', function(req,res){
+
+app.use('/gettrend', function(req,res){
     res.send('Getting the forecast');
 });
 

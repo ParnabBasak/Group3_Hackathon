@@ -1,7 +1,7 @@
 {
-  "name": "forecast_ws",
+  "name": "trend_ws",
   "version": "1.0.0",
-  "description": "Webservice to provide forecast data based on post method arguments",
+  "description": "Webservice to provide history/forecast data based on post method arguments",
   "main": "app.js",
   "scripts": {
     "test": "echo \"Error: no test specified\" && exit 1",
