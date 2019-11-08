@@ -19,11 +19,13 @@ exports.getTrendController = function(req,res){
     var forecastEndDate = new Date(forecastStartDate);
     forecastEndDate.setDate(forecastStartDate.getDate()+(forecastTrendWeeks*7));
 
-    var returnObject = {
-        history: Trend.getTrend(thisChannel, historyStartDate, historyEndDate, SalesHistory),
-        forecast: Trend.getTrend(thisChannel, forecastStartDate, forecastEndDate, SalesForecast)
+    var createObject = aync function(req,res){
+        var history = await Trend.getTrend(thisChannel, historyStartDate, historyEndDate, SalesHistory);
+        var forecast = await Trend.getTrend(thisChannel, forecastStartDate, forecastEndDate, SalesForecast);
+        res.json({
+            'history': history,
+            'forecast': forecast
+        });
     };
-
-
-
+    createObject();
 }
