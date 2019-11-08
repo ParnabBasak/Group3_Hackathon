@@ -1,4 +1,4 @@
-Node_Services is a fully functional api server built in Node.js (Express, MongoDB).
+Node_Services is a fully functional api server built in Node.js (Express, MongoDB) which serves as the services layer for the Hackathon project.
 
 ## Installation
 1. Create a folder to hold your installation: mkdir Node_Services
