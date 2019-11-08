@@ -28,10 +28,10 @@ export class AuthService {
 
   noAuthHeader = { headers: new HttpHeaders({ 'NoAuth': 'True' }) };
 
-  constructor(private http: HttpClient, private router: Router) {}
+  constructor(private http: HttpClient, private router: Router) { }
 
-  signupUser(user: User){
-    return this.http.post(environment.apiBaseUrl+'/register',user,this.noAuthHeader);
+  signupUser(user: User) {
+    return this.http.post(environment.apiBaseUrl + '/register', user, this.noAuthHeader);
   }
 
   login(authCredentials) {

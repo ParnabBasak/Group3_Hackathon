@@ -9,7 +9,7 @@ import { environment } from '../../../../environments/environment';
 })
 export class AdminComponent implements OnInit {
 
-  public uploader: FileUploader = new FileUploader({ url: environment.apiBaseUrl+'/upload', itemAlias: 'saleshistory' });
+  public uploader: FileUploader = new FileUploader({ url: environment.apiBaseUrl +'/upload', itemAlias: 'saleshistory' });
   constructor() { }
 
   ngOnInit() {

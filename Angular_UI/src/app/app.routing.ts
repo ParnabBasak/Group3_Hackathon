@@ -3,7 +3,7 @@ import { Routes, RouterModule } from '@angular/router';
 import { SigninComponent } from './components/login/signin/signin.component';
 import { SignupComponent } from './components/login/signup/signup.component';
 import { HomeComponent } from './components/home/home.component';
-import { DashboardComponent } from './components/core/dashboard/dashboard.component'
+import { DashboardComponent } from './components/core/dashboard/dashboard.component';
 import { AdminComponent } from './components/core/admin/admin.component';
 import { ForecastComponent } from './components/core/forecast/forecast.component';
 import { ErrorComponent } from './components/shared/error/error.component';
