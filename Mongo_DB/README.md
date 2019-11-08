@@ -21,6 +21,16 @@ Collection Name: channels
     "channelName": "Direct Store Order"
 }
 
+Collection Name: modelparams
+{
+  "fromDate": Date("2019-01-01"),
+  "toDate": Date("2019-01-01"),
+  "model": "ARIMA",
+  "values": [{"key":"p", "value": 1},
+             {"key":"d", "value": 1},
+             {"key":"q", "value": 1}]
+}
+
 Collection Name: saleshistories
 {
     "channel": "DSO", 
@@ -60,6 +70,16 @@ db.channels.insert({"channelId": "DSO", "channelName": "Direct Store Order"})
 db.channels.insert({"channelId": "DOS", "channelName": "Direct Online Sales"})
 db.channels.insert({"channelId": "PHO", "channelName": "Phone Order"})
 
+//Creates modelparams (Master)
+db.modelparams.insert(
+{
+  "fromDate": Date("2019-01-01"),
+  "toDate": Date("2019-01-01"),
+  "model": "ARIMA",
+  "values": [{"key":"p", "value": 1},
+             {"key":"d", "value": 1},
+             {"key":"q", "value": 1}]
+  })
 
 //Creates SalesHistories
 db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Net Unit", "quantity": 50})
