@@ -2,7 +2,7 @@ const SalesHistory = require('../models/history.model');
 const SalesForecast = require('../models/forecast.model');
 const Trend = require('../helpers/trend');
 
-exports.getTrendController = function(req,res){
+exports.getTrendController = async function(req,res){
     
     var data = req.body;
 
@@ -18,14 +18,10 @@ exports.getTrendController = function(req,res){
     historyEndDate.setDate(historyStartDate.getDate()+(historyTrendWeeks*7));
     var forecastEndDate = new Date(forecastStartDate);
     forecastEndDate.setDate(forecastStartDate.getDate()+(forecastTrendWeeks*7));
-
-    var createObject = aync function(req,res){
-        var history = await Trend.getTrend(thisChannel, historyStartDate, historyEndDate, SalesHistory);
+    var history = await Trend.getTrend(thisChannel, historyStartDate, historyEndDate, SalesHistory);
         var forecast = await Trend.getTrend(thisChannel, forecastStartDate, forecastEndDate, SalesForecast);
         res.json({
             'history': history,
             'forecast': forecast
         });
-    };
-    createObject();
 }
