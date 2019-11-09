@@ -31,5 +31,11 @@ module.exports = function (config) {
     files: [
       'https://code.jquery.com/jquery-1.11.2.min.js'
     ],
+    customLaunchers: {
+      ChromeHeadlessNoSandbox: {
+        base: 'ChromeHeadless',
+        flags: ['--no-sandbox']
+      }
+    }
   });
 };
