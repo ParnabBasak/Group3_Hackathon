@@ -16,7 +16,7 @@ customElements.define('compodoc-menu', class extends HTMLElement {
         <nav>
             <ul class="list">
                 <li class="title">
-                    <a href="index.html" data-type="index-link">angular-material-login-template documentation</a>
+                    <a href="index.html" data-type="index-link">angular-material-frontend-client documentation</a>
                 </li>
 
                 <li class="divider"></li>
@@ -58,13 +58,13 @@ customElements.define('compodoc-menu', class extends HTMLElement {
                                 <a href="modules/AppModule.html" data-type="entity-link">AppModule</a>
                                     <li class="chapter inner">
                                         <div class="simple menu-toggler" data-toggle="collapse" ${ isNormalMode ?
-                                            'data-target="#components-links-module-AppModule-48479131897abd7da10faa430f00aad2"' : 'data-target="#xs-components-links-module-AppModule-48479131897abd7da10faa430f00aad2"' }>
+                                            'data-target="#components-links-module-AppModule-d7961475c63d78f4f147473faf1d0a55"' : 'data-target="#xs-components-links-module-AppModule-d7961475c63d78f4f147473faf1d0a55"' }>
                                             <span class="icon ion-md-cog"></span>
                                             <span>Components</span>
                                             <span class="icon ion-ios-arrow-down"></span>
                                         </div>
-                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-48479131897abd7da10faa430f00aad2"' :
-                                            'id="xs-components-links-module-AppModule-48479131897abd7da10faa430f00aad2"' }>
+                                        <ul class="links collapse" ${ isNormalMode ? 'id="components-links-module-AppModule-d7961475c63d78f4f147473faf1d0a55"' :
+                                            'id="xs-components-links-module-AppModule-d7961475c63d78f4f147473faf1d0a55"' }>
                                             <li class="link">
                                                 <a href="components/AdminComponent.html"
                                                     data-type="entity-link" data-context="sub-entity" data-context-id="modules">AdminComponent</a>

@@ -3,7 +3,7 @@
     <head>
         <meta charset="utf-8">
         <meta http-equiv="x-ua-compatible" content="ie=edge">
-        <title>angular-material-login-template documentation</title>
+        <title>angular-material-frontend-client documentation</title>
         <meta name="description" content="">
         <meta name="viewport" content="width=device-width, initial-scale=1">
 
@@ -13,7 +13,7 @@
     <body>
 
         <div class="navbar navbar-default navbar-fixed-top visible-xs">
-            <a href="../" class="navbar-brand">angular-material-login-template documentation</a>
+            <a href="../" class="navbar-brand">angular-material-frontend-client documentation</a>
             <button type="button" class="btn btn-default btn-menu ion-ios-menu" id="btn-menu"></button>
         </div>
 
@@ -373,26 +373,26 @@
 export class ResultComponent implements OnInit {
   dtOptions: DataTables.Settings &#x3D; {};
   public empData: Object;
-  public temp: Object&#x3D;false;
+  public temp: Object &#x3D; false;
   displayedColumns;
 
   constructor() { }
 
   ngOnInit() {
     this.dtOptions &#x3D; {
-      &quot;paging&quot;:   false,
-      &quot;ordering&quot;: false,
-      &quot;info&quot;:     false,  
-      &quot;searching&quot;: false,
-      &quot;scrollX&quot;: true
+      &#x27;paging&#x27;: false,
+      &#x27;ordering&#x27;: false,
+      &#x27;info&#x27;: false,
+      &#x27;searching&#x27;: false,
+      &#x27;scrollX&#x27;: true
 
     };
-  this.empData &#x3D; [ {&quot;userId&quot;: &quot;123&quot;, &quot;title&quot;:&quot;title1&quot;, &quot;body&quot;:&quot;body1&quot;},
-                   {&quot;userId&quot;: &quot;456&quot;, &quot;title&quot;:&quot;title2&quot;, &quot;body&quot;:&quot;body2&quot;},
-                   {&quot;userId&quot;: &quot;789&quot;, &quot;title&quot;:&quot;title3&quot;, &quot;body&quot;:&quot;body3&quot;},
-                   {&quot;userId&quot;: &quot;987&quot;, &quot;title&quot;:&quot;title4&quot;, &quot;body&quot;:&quot;body4&quot;}];
-  this.temp &#x3D; true;
-  this.displayedColumns&#x3D; [&#x27;UserId2&#x27;, &#x27;title2&#x27;, &#x27;body2&#x27;]
+    this.empData &#x3D; [{ userId: &quot;123&quot;, title: &quot;title1&quot;, body: &quot;body1&quot; },
+    { userId: &quot;456&quot;, title: &quot;title2&quot;, body: &quot;body2&quot; },
+    { userId: &quot;789&quot;, title: &quot;title3&quot;, body: &quot;body3&quot; },
+    { userId: &quot;987&quot;, title: &quot;title4&quot;, body: &quot;body4&quot; }];
+    this.temp &#x3D; true;
+    this.displayedColumns &#x3D; [&#x27;UserId2&#x27;, &#x27;title2&#x27;, &#x27;body2&#x27;]
   }
 
 }
