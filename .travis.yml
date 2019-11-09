@@ -31,7 +31,7 @@ script:
 - ng build --prod
 
 before_deploy:
-  - rvm 1.9.3 do gem install aws-sdk -v 2.1.36
+  - rvm 1.9.3 do gem install aws-sdk -v 2.2.37
 
 deploy:
   provider: s3
