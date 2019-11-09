@@ -1,8 +1,17 @@
+language: node_js
+node_js:
+  - "10"
+dist: trusty
+sudo: required
+
+branches:
+  only:
+  - dev
+
 jobs:
   include:
     - stage: angular
-      script: echo one
-    - # stage name not required, will continue to use `test`
+      script: ./angular.sh
       script: echo two
     - stage: node
       script: echo three
