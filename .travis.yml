@@ -25,6 +25,9 @@ before_install:
 
 install:
   - npm install
+
+before_script:
+  - echo $AWS_S3_BUCKET_NAME  
       
 script:
 - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
