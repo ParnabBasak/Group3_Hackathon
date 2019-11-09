@@ -1,7 +1,8 @@
-sudo: false
-
 jobs:
   include:
-    - stage: "Angular"
+    - stage: angular
       script: echo one
-      script: echo two 
+    - # stage name not required, will continue to use `test`
+      script: echo two
+    - stage: node
+      script: echo three
