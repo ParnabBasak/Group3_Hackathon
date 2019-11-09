@@ -2,6 +2,6 @@ sudo: false
 
 jobs:
   include:
-    - stage: Angular
+    - stage: "Angular"
       script: echo one
       script: echo two 
