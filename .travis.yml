@@ -1,42 +1,7 @@
-language: node_js
-node_js:
-  - "10"
-dist: trusty
-sudo: required
+sudo: false
 
-branches:
-  only:
-  - dev
-
-addons:
-  apt:
-    sources:
-      - google-chrome
-    packages:
-      - google-chrome-stable
-
-cache:
-  directories:
-    - ./node_modules
-
-before_install:
-  - cd ./Angular_UI
-  - npm install -g @angular/cli
-
-install:
-  - npm install
-      
-script:
-- npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
-- ng build --prod
-
-deploy:
-  provider: s3
-  access_key_id: $AWS_ACCESS_KEY_ID
-  secret_access_key: $AWS_SECRET_ACCESS_KEY
-  bucket: $AWS_S3_BUCKET_NAME
-  skip_cleanup: true
-  region: $AWS_DEFAULT_REGION
-  local_dir: dist/angular-material-frontend-client
-  on:
-    branch: dev
+jobs:
+  include:
+    - stage: Angular
+      script: echo one
+      script: echo two 
