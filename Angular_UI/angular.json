@@ -65,18 +65,18 @@
         "serve": {
           "builder": "@angular-devkit/build-angular:dev-server",
           "options": {
-            "browserTarget": "angular-material-login-template:build"
+            "browserTarget": "angular-material-frontend-client:build"
           },
           "configurations": {
             "production": {
-              "browserTarget": "angular-material-login-template:build:production"
+              "browserTarget": "angular-material-frontend-client:build:production"
             }
           }
         },
         "extract-i18n": {
           "builder": "@angular-devkit/build-angular:extract-i18n",
           "options": {
-            "browserTarget": "angular-material-login-template:build"
+            "browserTarget": "angular-material-frontend-client:build"
           }
         },
         "test": {
@@ -114,16 +114,16 @@
           "builder": "@angular-devkit/build-angular:protractor",
           "options": {
             "protractorConfig": "e2e/protractor.conf.js",
-            "devServerTarget": "angular-material-login-template:serve"
+            "devServerTarget": "angular-material-frontend-client:serve"
           },
           "configurations": {
             "production": {
-              "devServerTarget": "angular-material-login-template:serve:production"
+              "devServerTarget": "angular-material-frontend-client:serve:production"
             }
           }
         }
       }
     }
   },
-  "defaultProject": "angular-material-login-template"
+  "defaultProject": "angular-material-frontend-client"
 }

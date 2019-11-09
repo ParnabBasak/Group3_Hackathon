@@ -20,10 +20,21 @@ cache:
     - ./node_modules
 
 before_install:
-  - cd ./Angular_UI && pwd
+  - cd ./Angular_UI
+  - npm install -g @angular/cli
 
 install:
   - npm install
       
 script:
 - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
+- ng build --prod
+
+deploy:
+  provider: s3
+  access_key_id: $AWS_ACCESS_KEY_ID
+  secret_access_key: $AWS_SECRET_ACCESS_KEY
+  bucket: $AWS_S3_BUCKET_NAME
+  skip_cleanup: true
+  region: $AWS_DEFAULT_REGION
+  local_dir: build

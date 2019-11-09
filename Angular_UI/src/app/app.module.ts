@@ -18,9 +18,6 @@ import { ToastrModule } from 'ngx-toastr';
 /* Angular Flex Layout */
 import { FlexLayoutModule } from '@angular/flex-layout';
 
-/* File Upload */
-import { FileSelectDirective } from 'ng2-file-upload';
-
 /* Angular Datatables */
 import { DataTablesModule } from 'angular-datatables';
 
@@ -53,7 +50,6 @@ import { ResultComponent } from './components/core/forecast/result/result.compon
     AdminComponent,
     ForecastComponent,
     ErrorComponent,
-    FileSelectDirective,
     SearchComponent,
     ResultComponent
   ],
