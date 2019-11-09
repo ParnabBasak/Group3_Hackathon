@@ -30,9 +30,6 @@ script:
 - npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
 - ng build --prod
 
-before_deploy:
-  - rvm 1.9.3 do gem install aws-sdk -v 2.2.37
-
 deploy:
   provider: s3
   access_key_id: $AWS_ACCESS_KEY_ID
