@@ -3,10 +3,16 @@ node_js:
   - "10"
 dist: trusty
 sudo: required
+
 branches:
   only:
   - dev
-before_script:
-  - cd ./Angular_UI &&  npm install -g @angular/cli
+
+before_install:
+  - cd ./Angular_UI && pwd
+
+install:
+  - npm install
+      
 script:
-- ng build --prod
+- npm run test -- --watch=false --no-progress --browsers=ChromeHeadlessNoSandbox
