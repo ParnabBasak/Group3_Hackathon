@@ -41,3 +41,5 @@ deploy:
   skip_cleanup: true
   region: $AWS_DEFAULT_REGION
   local_dir: dist
+  on:
+    branch: dev
