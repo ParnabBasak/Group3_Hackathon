@@ -37,4 +37,4 @@ deploy:
   bucket: $AWS_S3_BUCKET_NAME
   skip_cleanup: true
   region: $AWS_DEFAULT_REGION
-  local_dir: build
+  local_dir: dist
