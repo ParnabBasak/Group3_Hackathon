@@ -8,9 +8,23 @@ branches:
   only:
   - dev
 
+cache:
+  directories:
+    - node_modules
+
 jobs:
   include:
     - stage: angular
       script: ./angular.sh
+      deploy:
+        provider: s3
+        access_key_id: $AWS_ACCESS_KEY_ID
+        secret_access_key: $AWS_SECRET_ACCESS_KEY
+        bucket: $AWS_S3_BUCKET_NAME
+        skip_cleanup: true
+        region: $AWS_DEFAULT_REGION
+        local_dir: dist/angular-material-frontend-client
+        on:
+          branch: dev
     - # This is node running 
       script: ./node.sh
