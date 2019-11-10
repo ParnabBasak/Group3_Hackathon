@@ -13,6 +13,3 @@ npm install
 echo "-------------------------"
 echo "Completed npm install"
 echo "-------------------------"
-
-
-
