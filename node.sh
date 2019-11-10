@@ -19,6 +19,7 @@ echo "-------------------------"
 #mkdir dist
 #cd dist
 #npm pack ../
+rm -rf node_modules
 zip -r latest *
 mkdir -p dist
 mv latest.zip ./dist/latest.zip
