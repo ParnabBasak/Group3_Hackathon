@@ -1,3 +1,4 @@
 node_modules/
 *saleshistory-*.csv
 .ipynb_checkpoints/
+dist/
