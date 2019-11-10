@@ -20,7 +20,4 @@ echo "Running ng build --prod"
 echo "-------------------------"
 ng build --prod
 
-echo "Process completed with exit code 0"
-res="$($1)"
-echo "$?"
-echo "$res"
+echo "Process completed with exit code $?"
