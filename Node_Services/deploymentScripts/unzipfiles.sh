@@ -2,7 +2,7 @@
 
 source /home/ec2-user/.bash_profile
 echo "line1"
-npm --version
+sudo npm --version
 echo "------------------------------------------"
 echo "Executing BeforeInstall hook. In unzip.sh "
 echo "------------------------------------------"
