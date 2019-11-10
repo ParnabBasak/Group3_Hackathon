@@ -12,7 +12,7 @@ echo $PWD
 echo "-------------------------"
 echo "Run npm install"
 echo "-------------------------"
-npm install
+sudo npm install
 echo "-------------------------"
 echo "Completed npm install"
 echo "-------------------------"
