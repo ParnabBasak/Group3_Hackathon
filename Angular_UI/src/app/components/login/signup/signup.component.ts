@@ -20,7 +20,7 @@ export class SignupComponent implements OnInit {
     {code: "GENERAL", value: "General"}
   ];
 
-  constructor(private authService: AuthService, private router: Router, private toastr: ToastrService) { }
+  constructor(public authService: AuthService, private router: Router, private toastr: ToastrService) { }
 
   ngOnInit() {
   }

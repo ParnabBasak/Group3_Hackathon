@@ -7,15 +7,61 @@
       <div class="container">
         <mat-grid-list cols="2" rowHeight="77">
           <mat-grid-tile>
-            <input type="file" name="saleshistory" ng2FileSelect [uploader]="uploader" />
+            <div>
+              <input type="file" name="image" (change)="fileProgress($event)" />
+            </div>
           </mat-grid-tile>
           <mat-grid-tile>
-            <button type="button" cmat-stroked-button style="width: 150px;" color="accent" class="btn-block"
-              (click)="uploader.uploadAll()" [disabled]="!uploader.getNotUploadedItems().length">
-              Upload an Image
-            </button>
+            <div>
+              <button type="button" cmat-stroked-button style="width: 150px;" color="accent" class="btn-block"
+                (click)="onSubmit()">Upload</button>
+            </div>
           </mat-grid-tile>
+
+          <mat-grid-tile colspan="2">
+            <div *ngIf="fileUploadProgress">
+              Upload progress: {{ fileUploadProgress }}
+            </div>
+            <div class="image-preview mb-3" *ngIf="previewUrl">
+              <img [src]="previewUrl" height="300" />
+            </div>
+
+            <div class="mb-3" *ngIf="uploadedFilePath">
+              {{uploadedFilePath}}
+            </div>
+          </mat-grid-tile>
+
         </mat-grid-list>
+
+
+
+
+
+
+
+
+
+
+        <!-- <div class="row">
+        <div class="col-md-6 offset-md-3">
+            <h3>Choose File</h3>            
+            <div class="form-group">
+                <input type="file" name="image" (change)="fileProgress($event)" />
+            </div>
+            <div *ngIf="fileUploadProgress">
+                Upload progress: {{ fileUploadProgress }}
+            </div>
+            <div class="image-preview mb-3" *ngIf="previewUrl">
+                <img [src]="previewUrl" height="300" />                 
+            </div>
+ 
+            <div class="mb-3" *ngIf="uploadedFilePath">
+                {{uploadedFilePath}}
+            </div>
+             
+            
+        </div>
+    </div> -->
       </div>
     </mat-card-content>
   </mat-card>

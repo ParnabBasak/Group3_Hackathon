@@ -39,10 +39,7 @@ app.use(express.urlencoded({ extended: false }));
 // Validator - populate the error array
 app.use(expressValidator({
   errorFormatter: function (param, msg, value) {
-    var namespace = param.split('.')
-      , root = namespace.shift()
-      , formParam = root;
-
+    var namespace = param.split('.'), root = namespace.shift(), formParam = root;
     while (namespace.length) {
       formParam += '[' + namespace.shift() + ']';
     }

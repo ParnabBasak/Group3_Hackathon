@@ -1,7 +1,6 @@
 const mongoose = require('mongoose');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
-
 var userSchema = new mongoose.Schema({
     firstName: {
         type: String,
@@ -54,7 +53,7 @@ userSchema.methods.generateJwt = function () {
         {
             expiresIn: process.env.JWT_EXP
         });
-}
+};
 
 
 // Export the model
