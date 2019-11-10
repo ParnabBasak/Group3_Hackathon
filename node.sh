@@ -22,7 +22,7 @@ echo "-------------------------"
 
 - zip -r latest *
 - mkdir -p dist
-- mv latest.zip dist/latest.zip
+- mv latest.zip ./dist/latest.zip
 echo "-------------------------"
 echo "Completed npm pack"
 echo "-------------------------"
