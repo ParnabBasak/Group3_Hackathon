@@ -19,6 +19,9 @@ addons:
 #  directories:
 #    - node_modules
 
+cache:
+  npm: false
+
 jobs:
   include:
     - stage: "Build & Deploy"
