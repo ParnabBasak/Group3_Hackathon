@@ -1,6 +1,8 @@
 #!/bin/sh
 
 source /home/ec2-user/.bash_profile
+echo "line1"
+npm --version
 echo "------------------------------------------"
 echo "Executing BeforeInstall hook. In unzip.sh "
 echo "------------------------------------------"
@@ -15,7 +17,7 @@ echo "Present working directory after cd"
 echo "-------------------------"
 echo $PWD
 echo "-------------------------"
-echo "Run npm install"
+echo "Run npm version"
 echo "-------------------------"
 npm --version
 #npm install
