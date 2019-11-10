@@ -16,6 +16,7 @@ echo "-------------------------"
 echo "-------------------------"
 echo "Run npm pack"
 echo "-------------------------"
+cd dist
 npm pack ../
 echo "-------------------------"
 echo "Completed npm pack"
