@@ -58,4 +58,4 @@ jobs:
           deployment_group: forecasterserverappgrp
           region: $AWS_DEFAULT_REGION
           on:
-            branch: dev   
+            branch: dev
