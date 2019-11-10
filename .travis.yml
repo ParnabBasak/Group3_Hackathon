@@ -49,8 +49,8 @@ jobs:
           on:
             branch: dev
         - provider: codedeploy
-          access_key_id: $AWS_ACCESS_KEY
-          secret_access_key: $AWS_SECRET_KEY
+          access_key_id: $AWS_ACCESS_KEY_ID
+          secret_access_key: $AWS_SECRET_ACCESS_KEY
           bucket: $AWS_S3_NODE_BUCKET_NAME
           key: latest.zip
           bundle_type: zip
