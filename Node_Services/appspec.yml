@@ -3,6 +3,11 @@ os: linux
 files:
   - source: /
     destination: /home/ec2-user/Node_Services
+permissions:
+  - object: /
+    pattern: "**"
+    owner: ec2-user
+    group: ec2-user
 hooks:
   BeforeInstall:
     - location: deploymentScripts/unzipfiles.sh

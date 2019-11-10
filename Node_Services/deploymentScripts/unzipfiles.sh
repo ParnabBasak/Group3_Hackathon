@@ -8,7 +8,7 @@ cd /home/ec2-user/Node_Services
 echo "-------------------------"
 echo "Run npm install"
 echo "-------------------------"
-sudo npm install
+npm install
 echo "-------------------------"
 echo "Completed npm install"
 echo "-------------------------"

@@ -25,9 +25,5 @@ echo "Completed zip"
 echo "-------------------------"
 
 echo "----------------------------------"
-echo "Process completed with exit code 0"
+echo "Process completed with exit code $?"
 echo "----------------------------------"
-
-res="$($1)"
-echo "$?"
-echo "$res"
