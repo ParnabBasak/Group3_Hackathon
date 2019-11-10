@@ -1,0 +1,16 @@
+version: 0.0
+os: linux
+files:
+  - source: /
+    destination: /home/ec2-user/Node_Services
+hooks:
+  BeforeInstall:
+    - location: deploymentScripts/unzip.sh
+  ApplicationStart:
+    - location: deploymentScripts/start_server.sh
+      timeout: 300
+      runas: root
+  ApplicationStop:
+    - location: deploymentScripts/stop_server.sh
+      timeout: 300
+      runas: root
