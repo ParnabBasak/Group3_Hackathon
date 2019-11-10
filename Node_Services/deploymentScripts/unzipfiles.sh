@@ -1,5 +1,6 @@
 #!/bin/sh
 
+source /home/ec2-user/.bash_profile
 echo "------------------------------------------"
 echo "Executing BeforeInstall hook. In unzip.sh "
 echo "------------------------------------------"

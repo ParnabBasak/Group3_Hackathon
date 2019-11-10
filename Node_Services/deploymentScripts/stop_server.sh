@@ -1,5 +1,6 @@
 #!/bin/sh
 
+source /home/ec2-user/.bash_profile
 echo "----------------------------------------------------"
 echo "Executing ApplicationStop hook. In stop_server.sh "
 echo "----------------------------------------------------"
