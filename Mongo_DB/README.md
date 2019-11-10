@@ -35,7 +35,8 @@ Collection Name: saleshistories
 {
     "channel": "DSO", 
     "saleDate": Date("2013-08-07"), 
-    "producct": "Brand A1 - Phone", 
+    "producct": "Brand A1-
+Phone", 
     "attribute": "Net Unit", 
     "quantity": 50
 }
@@ -44,7 +45,8 @@ Collection Name: salesforecast
 {
     "channel": "DSO", 
     "saleDate": Date("2022-08-07"), 
-    "producct": "Brand A1 - Phone", 
+    "producct": "Brand A1-
+Phone", 
     "attribute": "Net Unit", 
     "quantity": 150
 }
@@ -85,16 +87,16 @@ db.modelparams.insert(
   })
 
 //Creates SalesHistories
-db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Net Unit", "quantity": 50})
-db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Forecasting Methodology", "quantity": 51})
-db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Last Year", "quantity": 52})
-db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Year Over Year", "quantity": 53})
-db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Week Over Year", "quantity": 54})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1-Phone", "attribute": "Net Unit", "quantity": 50})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1-Phone", "attribute": "Forecasting Methodology", "quantity": 51})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1-Phone", "attribute": "Last Year", "quantity": 52})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1-Phone", "attribute": "Year Over Year", "quantity": 53})
+db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1-Phone", "attribute": "Week Over Year", "quantity": 54})
 
 //Creates SalesForecast
-db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1 - Phone", "attribute": "Net Unit", "quantity": 150})
-db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1 - Phone", "attribute": "ARIMA", "quantity": 151})
-db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1 - Phone", "attribute": "Last Year", "quantity": 152})
-db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1 - Phone", "attribute": "Year Over Year", "quantity": 153})
-db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1 - Phone", "attribute": "Week Over Year", "quantity": 154})
+db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1-Phone", "attribute": "Net Unit", "quantity": 150})
+db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1-Phone", "attribute": "ARIMA", "quantity": 151})
+db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1-Phone", "attribute": "Last Year", "quantity": 152})
+db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1-Phone", "attribute": "Year Over Year", "quantity": 153})
+db.salesforecasts.insert({"channel": "DSO", "saleDate": Date("2022-08-07"), "producct": "Brand A1-Phone", "attribute": "Week Over Year", "quantity": 154})
 ```
