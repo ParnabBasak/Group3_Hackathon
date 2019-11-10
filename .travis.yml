@@ -36,12 +36,23 @@ jobs:
     - # This is node running 
       script: ./node.sh
       deploy:
-        provider: s3
-        access_key_id: $AWS_ACCESS_KEY_ID
-        secret_access_key: $AWS_SECRET_ACCESS_KEY
-        bucket: $AWS_S3_NODE_BUCKET_NAME
-        skip_cleanup: true
-        region: $AWS_DEFAULT_REGION
-        local_dir: Node_Services/dist
-        on:
-          branch: dev
+        - provider: s3
+          access_key_id: $AWS_ACCESS_KEY_ID
+          secret_access_key: $AWS_SECRET_ACCESS_KEY
+          bucket: $AWS_S3_NODE_BUCKET_NAME
+          skip_cleanup: true
+          region: $AWS_DEFAULT_REGION
+          local_dir: Node_Services/dist
+          on:
+            branch: dev
+        - provider: codedeploy
+          access_key_id: $AWS_ACCESS_KEY
+          secret_access_key: $AWS_SECRET_KEY
+          bucket: $AWS_S3_NODE_BUCKET_NAME
+          key: forecast_server-1.0.0.tgz
+          bundle_type: zip
+          application: forecasterserverapp
+          deployment_group: forecasterserverappgrp
+          region: $AWS_DEFAULT_REGION
+          on:
+            branch: dev   
