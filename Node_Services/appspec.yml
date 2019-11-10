@@ -13,11 +13,11 @@ hooks:
     - location: deploymentScripts/unzipfiles.sh
       timeout: 300
       runas: ec2-user
-  #ApplicationStart:
-  #  - location: deploymentScripts/start_server.sh
-  #    timeout: 300
-  #    runas: root
+  ApplicationStart:
+    - location: deploymentScripts/start_server.sh
+      timeout: 300
+      runas: ec2-user
   #ApplicationStop:
   #  - location: deploymentScripts/stop_server.sh
   #    timeout: 300
-  #    runas: root
+  #    runas: ec2-user

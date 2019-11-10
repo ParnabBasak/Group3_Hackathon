@@ -5,7 +5,6 @@ echo "------------------------------------------"
 echo "Executing BeforeInstall hook. In unzip.sh "
 echo "------------------------------------------"
 cd /home/ec2-user/Node_Services
-whoami
 echo "-------------------------"
 echo "Run npm install"
 echo "-------------------------"
