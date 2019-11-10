@@ -21,7 +21,7 @@ cache:
 
 jobs:
   include:
-    - stage: angular
+    - stage: "Build & Deploy"
       script: ./angular.sh
       deploy:
         provider: s3
