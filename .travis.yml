@@ -49,7 +49,7 @@ jobs:
           access_key_id: $AWS_ACCESS_KEY
           secret_access_key: $AWS_SECRET_KEY
           bucket: $AWS_S3_NODE_BUCKET_NAME
-          key: forecast_server-1.0.0.tgz
+          key: latest.zip
           bundle_type: zip
           application: forecasterserverapp
           deployment_group: forecasterserverappgrp

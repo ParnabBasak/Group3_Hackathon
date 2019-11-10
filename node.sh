@@ -14,11 +14,15 @@ echo "Completed npm install --prod"
 echo "-------------------------"
 
 echo "-------------------------"
-echo "Run npm pack"
+echo "Run zip"
 echo "-------------------------"
-mkdir dist
-cd dist
-npm pack ../
+#mkdir dist
+#cd dist
+#npm pack ../
+
+- zip -r latest *
+- mkdir -p dist
+- mv latest.zip dist/latest.zip
 echo "-------------------------"
 echo "Completed npm pack"
 echo "-------------------------"
