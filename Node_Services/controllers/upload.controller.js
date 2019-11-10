@@ -46,7 +46,7 @@ async function startUpload(req, res) {
                                     // 1. type_of_script 
                                     // 2. list containing Path of the script 
                                     //    and arguments for the script  
-                                    var pythonCSVfilePath = '/Users/parnabbasak/Documents/workspace/Group3_Hackathon/Node_Services/uploads/' + req.file.filename;
+                                    var pythonCSVfilePath = '/Users/abhijitanand/Desktop/WebDev/Simplilearn/Group3_Hackathon/Node_Services/uploads/' + req.file.filename;
                                     var process = spawn('python3', ["./scripts/forecast.py",
                                         pythonCSVfilePath]);
 
