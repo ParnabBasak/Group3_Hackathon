@@ -17,7 +17,8 @@ echo $PWD
 echo "-------------------------"
 echo "Run npm install"
 echo "-------------------------"
-sudo npm install
+npm --version
+#npm install
 echo "-------------------------"
 echo "Completed npm install"
 echo "-------------------------"
