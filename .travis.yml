@@ -15,9 +15,9 @@ addons:
     packages:
       - google-chrome-stable
       
-cache:
-  directories:
-    - node_modules
+#cache:
+#  directories:
+#    - node_modules
 
 jobs:
   include:
