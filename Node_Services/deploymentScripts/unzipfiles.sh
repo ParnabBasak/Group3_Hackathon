@@ -7,7 +7,7 @@ echo "------------------------------------------"
 cd /home/ec2-user/Node_Services
 echo "------------------------------------------"
 echo "Present working directory"
-echo "------------------------------------------"
+echo "-------------------------"
 echo $PWD
 echo "-------------------------"
 echo "Run npm install"
