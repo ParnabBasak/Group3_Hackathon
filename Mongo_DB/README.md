@@ -21,6 +21,14 @@ Collection Name: channels
     "channelName": "Direct Store Order"
 }
 
+Colletion Name: lookups
+{
+  "key": "WEEKS",
+  "values": [{"key":"1", "value": "1"},
+             {"key":"2", "value": "2"},
+             {"key":"3", "value": "3"}]
+})
+
 Collection Name: modelparams
 {
   "fromDate": Date("2019-01-01"),
@@ -80,6 +88,21 @@ db.modelparams.insert(
              {"key":"d", "value": 1},
              {"key":"q", "value": 1}]
   })
+
+//creates lookups (Master)
+db.lookups.insert(
+{
+  "key": "WEEKS",
+  "values": [{"key":"4", "value": "4"},
+             {"key":"5", "value": "5"},
+             {"key":"6", "value": "6"},
+             {"key":"7", "value": "7"},
+             {"key":"8", "value": "8"},
+             {"key":"9", "value": "9"},
+             {"key":"10", "value": "10"},
+             {"key":"11", "value": "11"},
+             {"key":"12", "value": "12"}]
+})
 
 //Creates SalesHistories
 db.saleshistories.insert({"channel": "DSO", "saleDate": Date("2013-08-07"), "producct": "Brand A1 - Phone", "attribute": "Net Unit", "quantity": 50})

@@ -9,6 +9,7 @@ const ctrlChannel = require('../controllers/channel.controller');
 const ctrlHistory = require('../controllers/history.controller');
 const ctrlForecast = require('../controllers/forecast.controller');
 const ctrlTrend = require('../controllers/trend.controller');
+const ctrlMaster = require('../controllers/master.controller');
 
 const jwtHelper = require('../config/jwtHelper');
 
@@ -36,5 +37,6 @@ router.get('/channels', ctrlChannel.getChannels);
 router.get('/history/:id', ctrlHistory.getSalesDates);
 router.get('/forecast/:id', ctrlForecast.getSalesDates);
 router.post('/trends', ctrlTrend.getTrendController);
+router.get('/master/:id', ctrlMaster.getLookups);
 
 module.exports = router;

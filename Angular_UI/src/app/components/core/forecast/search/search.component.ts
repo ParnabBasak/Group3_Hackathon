@@ -1,6 +1,7 @@
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormGroup, FormBuilder, Validators } from '@angular/forms'
 import { SearchService } from 'src/app/services/search/search.service';
+import { LookupsService } from 'src/app/services/master/lookups.service'
 import { Router } from '@angular/router'
 import { ResultComponent } from 'src/app/components/core/forecast/result/result.component'
 
@@ -15,13 +16,15 @@ export class SearchComponent implements OnInit {
 
   searchForm: FormGroup;
   channels: any = [];
+  weeks: any = [];
 
 
   showResult = false;
 
   constructor(private builder: FormBuilder,
     private _searchService: SearchService,
-    private _router: Router
+    private _router: Router,
+    private _lookupsService: LookupsService
   ) { }
 
   ngOnInit() {
@@ -34,6 +37,7 @@ export class SearchComponent implements OnInit {
     })
 
     this.getChannels();
+    this.getWeeks();
   }
 
   searchTrend() {
@@ -48,18 +52,21 @@ export class SearchComponent implements OnInit {
     this._searchService.fetchTrend(data)
       .subscribe(result => {
         this._searchService.productTrends = result;
-        this._resultComponent.triggerOnInit()
-        //this._searchService.messageSource.next(result)
+        this._resultComponent.triggerOnInit();
         this.showResult = true;
       });
   }
 
   getChannels() {
-    this._searchService.getChannels().subscribe(data => {
-      this.channels = data
+    this._lookupsService.getChannels().subscribe(data => {
+      this.channels = data;
     });
   }
 
-
-
+  getWeeks() {
+    this._lookupsService.getWeeks().subscribe(data => {
+      var temp = data[0].values;
+      this.weeks = temp;
+    });
+  }
 }
