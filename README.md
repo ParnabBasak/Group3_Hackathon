@@ -1,6 +1,6 @@
 # Hackathon Timeseries Forecasting - Team 3
 
-This is the master repository for the Timeseries Forecasting Hackathon Case Study
+This is the DEV repository for the Timeseries Forecasting Hackathon Case Study for Team 3.
 
 ## Architecture
 
@@ -33,13 +33,17 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
+### Accessing the PRODUCTION VERSION of the application
+Visit:
+
+http://forecasterapp.s3-website-us-east-1.amazonaws.com/
+
 ### Prerequisites
+Visit respective folder for detailed prerequisites that are needed to run in local for the individual layers.
 
-- Angular
-- Node
-- MongoDB
 
-### Installing
+### Installing in Local (Steps)
+Refer to the prerequisites section. If you have that meet, pls proceed further. 
 
 1. Create a new mongo DB instance called **Forecast**. Follow the scripts in as outlined in Mongo_DB folder to create the DB instance
 2. Run the node module by following the instructions in Node_Services folder
@@ -50,47 +54,24 @@ These instructions will get you a copy of the project up and running on your loc
 
 Visit respective folder for detailed steps to run tests for the individual layers.
 
-```
-Give an example
-```
-
-### And coding style tests
-
-Explain what these tests test and why
-
-```
-Give an example
-```
-
 ## Deployment
 
-Add additional notes about how to deploy this on a live system
+Refer to the Deployment Architecture slide in the Architectue section.
 
 ## Built With
-
-## Contributing
-
-Please read [CONTRIBUTING.md](https://gist.github.com/PurpleBooth/b24679402957c63ec426) for details on our code of conduct, and the process for submitting pull requests to us.
-
-## Versioning
-
-We use [SemVer](http://semver.org/) for versioning. For the versions available, see the [tags on this repository](https://github.com/your/project/tags). 
+- Angular 8
+- Node
+- MongoDB
+- Python 3
 
 ## Authors
 
 balamurugan.k1@tcs.com
 parnab.basak@tcs.com
-neha49.g@tcs.com
-george.nathan@tcs.com
-kumar.vipin@tcs.com
 abhijit.and@tcs.com
 bharti.chaudhari@tcs.com
 j.montfort@tcs.com
-kimberly.brown@tcs.com
 p.kavadimatti@tcs.com
-shashikant.koti@tcs.com
-vittal.prasad@tcs.com
-edwin.barron@tcs.com
 balaji.subramanian1@tcs.com
 
 ## License
@@ -100,5 +81,5 @@ This project is licensed under the MIT License - see the [LICENSE.md](LICENSE.md
 ## Acknowledgments
 
 * Hat tip to anyone whose code was used
-* Inspiration
-* etc
+* Thank you Google for your search results
+

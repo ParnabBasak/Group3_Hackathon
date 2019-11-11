@@ -17,5 +17,12 @@ Keeping Node_Services running after closing the terminal can be done in a few wa
 4. Save the PM2 config: pm2 save
 5. To start/stop: pm2 start nodeServices / pm2 stop nodeServices
 
-Note: Node.js version 7.x or greater is needed.
-      An accessible Mongodb instance is up and running. Mongo db url can be found in the .env config file
+## Pre Requisites for local installation
+   1. Node.js version 7.x or greater is needed. npm should also be installed
+   2. An accessible Mongodb instance is up and running. Mongo db url and port can be found in the .env config file. Change the url/port if your local instance is not as per our default.
+   3. If you are an Admin user and would need to run the Upload functionality via the dmin screen, you would need to have Python3 installed. The following packages are required:
+        a. Pyhon3. Command to install: install python3
+        b. Pip. Command to install: install pip
+        c. Pandas. Command to install: pip install pandas
+        d. Pymongo. Command to install: pip install pymongo
+        e. Statsmodels. Command to install: pip install statsmodels
