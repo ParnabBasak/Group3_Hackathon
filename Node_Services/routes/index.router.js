@@ -5,11 +5,15 @@ const path = require('path');
 
 const ctrlUser = require('../controllers/user.controller');
 const ctrlUpload = require('../controllers/upload.controller');
+const ctrlChannel = require('../controllers/channel.controller');
+const ctrlHistory = require('../controllers/history.controller');
+const ctrlForecast = require('../controllers/forecast.controller');
+const ctrlTrend = require('../controllers/trend.controller');
+
 const jwtHelper = require('../config/jwtHelper');
 
-router.post('/register', ctrlUser.register);
-router.post('/authenticate', ctrlUser.authenticate);
-router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
+
+
 
 const DIR = './uploads';
 
@@ -24,6 +28,13 @@ let storage = multer.diskStorage({
 let upload = multer({ storage: storage });
 
 router.post('/upload', upload.single('saleshistory'), ctrlUpload.upload2);
-//router.post('/upload', ctrlUpload.upload2);
+router.post('/register', ctrlUser.register);
+router.post('/authenticate', ctrlUser.authenticate);
+router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
+
+router.get('/channels', ctrlChannel.getChannels);
+router.get('/history/:id', ctrlHistory.getSalesDates);
+router.get('/forecast/:id', ctrlForecast.getSalesDates);
+router.post('/trends', ctrlTrend.getTrendController);
 
 module.exports = router;
