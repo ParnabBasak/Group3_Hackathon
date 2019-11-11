@@ -8,10 +8,14 @@ exports.getTrendController = async function (req, res) {
     var data = req.body;
 
     var thisChannel = data.channel;
-    console.log(new Date())
+    console.log("Request "+ JSON.stringify(data));
+    
     var historyStartDate = new Date(data.historyStartDate);
-    console.log(historyStartDate)
+    console.log("History Start Date " + historyStartDate);
+
     var historyTrendWeeks = data.historyTrendWeeks;
+    console.log("History Weeks " + historyTrendWeeks);
+
     var historyEndDate = new Date(historyStartDate);
     historyEndDate.setDate(historyStartDate.getDate() + (historyTrendWeeks * 7));
 
@@ -22,9 +26,13 @@ exports.getTrendController = async function (req, res) {
         dt.setDate(dt.getDate() + 7);
         historyWeeks['Week ' + (i)] = { 'saleDate': dt.toDateString(), quantity: '-' };
     }
-
+    
     var forecastStartDate = new Date(data.forecastStartDate);
+    console.log("Forecast Start Date " + forecastStartDate);
+    
     var forecastTrendWeeks = data.forecastTrendWeeks;
+    console.log("Forecast Weeks " + forecastTrendWeeks);
+
     var forecastEndDate = new Date(forecastStartDate);
     forecastEndDate.setDate(forecastStartDate.getDate() + (forecastTrendWeeks * 7));
 
