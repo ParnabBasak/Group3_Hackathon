@@ -6,10 +6,23 @@ const path = require('path');
 const ctrlUser = require('../controllers/user.controller');
 const ctrlUpload = require('../controllers/upload.controller');
 const jwtHelper = require('../config/jwtHelper');
+//Added by Abhijit on 11/7 for trend.controller
+const ctrlTrend = require('../controllers/trend.controller');
+//Get channel, history,forecast routes - Bharti
+const ctrlChannel = require('../controllers/channel.controller');
+const ctrlHistory = require('../controllers/history.controller');
+const ctrlForecast = require('../controllers/forecast.controller');
+router.get('/channels',  ctrlChannel.getChannels);
+router.get('/history/:id',  ctrlHistory.getSalesDates);
+router.get('/forecast/:id',  ctrlForecast.getSalesDates);
+//////////////Get channel, history,forecast routes - Bharti
 
 router.post('/register', ctrlUser.register);
 router.post('/authenticate', ctrlUser.authenticate);
 router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
+
+//Added by Abhijit on 11/7 for trend.controller
+router.post('/trends', ctrlTrend.getTrendController);
 
 const DIR = './uploads';
 

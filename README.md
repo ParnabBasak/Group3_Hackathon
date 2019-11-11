@@ -38,6 +38,9 @@ These instructions will get you a copy of the project up and running on your loc
 - Angular
 - Node
 - MongoDB
+- Python3
+    - pymongo
+    - statsmodels (installing statsmodels automatically installs pandas)
 
 ### Installing
 
