@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../../../services/auth/auth.service';
+import { LookupsService } from 'src/app/services/master/lookups.service'
 
 @Component({
   selector: 'app-signup',
@@ -15,14 +16,15 @@ export class SignupComponent implements OnInit {
   showSucessMessage: boolean;
   serverErrorMessages: string;
 
-  roles = [
-    {code: "ADMIN", value: "Administrator"},
-    {code: "GENERAL", value: "General"}
-  ];
+  roles: any = [];
 
-  constructor(public authService: AuthService, private router: Router, private toastr: ToastrService) { }
+  constructor(public authService: AuthService, private router: Router, private toastr: ToastrService, private _lookupsService: LookupsService) { }
 
   ngOnInit() {
+    this._lookupsService.getLookups('USERROLES').subscribe(data => {
+      var temp = data[0].values;
+      this.roles = temp;
+    });
   }
 
   onSubmit(form: NgForm) {

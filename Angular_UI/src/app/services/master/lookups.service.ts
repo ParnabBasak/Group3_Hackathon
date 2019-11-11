@@ -14,7 +14,7 @@ export class LookupsService {
     return this.http.get<any>(environment.apiBaseUrl+'/channels');
   }
 
-  getWeeks() : Observable<any>{
-    return this.http.get<any>(environment.apiBaseUrl+'/master/'+'WEEKS');
+  getLookups(lookupId: String) : Observable<any>{
+    return this.http.get<any>(environment.apiBaseUrl+'/master/'+lookupId);
   }
 }

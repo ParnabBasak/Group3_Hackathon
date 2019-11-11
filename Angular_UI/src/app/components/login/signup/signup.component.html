@@ -46,7 +46,7 @@
                 <mat-form-field class="example-full-width">
                     <mat-label>Choose a role...</mat-label>
                     <mat-select matInput [(ngModel)]="authService.selectedUser.role" name="role" required >
-                        <mat-option [value]="role.code" *ngFor="let role of roles">{{role.value}}
+                        <mat-option [value]="role.key" *ngFor="let role of roles">{{role.value}}
                         </mat-option>
                     </mat-select>
                     <!-- <mat-error *ngIf="signUpForm.submitted && role.errors.required">This field is required.</mat-error> -->

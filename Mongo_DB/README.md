@@ -102,6 +102,13 @@ db.lookups.insert(
              {"key":"10", "value": "10"},
              {"key":"11", "value": "11"},
              {"key":"12", "value": "12"}]
+}) 
+
+db.lookups.insert(
+{
+  "key": "USERROLES",
+  "values": [{"key":"ADMIN", "value": "Administrator"},
+             {"key":"GENERAL", "value": "General"}]
 })
 
 //Creates SalesHistories

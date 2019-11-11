@@ -64,7 +64,7 @@ export class SearchComponent implements OnInit {
   }
 
   getWeeks() {
-    this._lookupsService.getWeeks().subscribe(data => {
+    this._lookupsService.getLookups('WEEKS').subscribe(data => {
       var temp = data[0].values;
       this.weeks = temp;
     });
