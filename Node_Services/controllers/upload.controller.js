@@ -1,3 +1,4 @@
+const ck = require('ckey');
 const mongoose = require('mongoose');
 const csv = require("csvtojson");
 const SalesHistory = require('../models/history.model');
@@ -46,7 +47,8 @@ async function startUpload(req, res) {
                                     // 1. type_of_script 
                                     // 2. list containing Path of the script 
                                     //    and arguments for the script  
-                                    var pythonCSVfilePath = '/Users/parnabbasak/Documents/workspace/Group3_Hackathon/Node_Services/uploads/' + req.file.filename;
+                                    var pythonCSVfilePath = ck.UPLOAD_FILE_DIR + req.file.filename;
+                                    console.log("File path passed to from node "+pythonCSVfilePath)
                                     var process = spawn('python3', ["./scripts/forecast.py",
                                         pythonCSVfilePath]);
 
