@@ -1,9 +1,12 @@
 <div style="margin-top:80px" fxLayout="row" fxLayoutAlign="center start">
-
+        
     <mat-card class="searchbox">
-        <mat-card-header>
-            <mat-card-title>Sales Forecast (ARIMA)</mat-card-title>
-        </mat-card-header>
+            <div id="search-fab" class="mdl-color--accent mdl-color-text--white">
+                    <i class="material-icons">search</i>
+                </div>
+            <div class="text-center font-weight-bold" style="font-size:30px;">
+                    Sales Forecast (ARIMA)
+            </div>
         <form [formGroup]="searchForm" class="text-center">
             <mat-card-content>
                 <mat-grid-list cols="2" rowHeight="77">
@@ -12,11 +15,9 @@
                             <mat-label>Choose a Channel...</mat-label>
                             <select name="channel" id="channel" class="form-control" matNativeControl
                                 formControlName="channel" required>
-
                                 <option *ngFor="let channel of channels" [value]="channel.channelId">
                                     {{channel.channelName}}
                                 </option>
-
                             </select>
                         </mat-form-field>
                     </mat-grid-tile>
@@ -71,7 +72,6 @@
             </div>
         </form>
     </mat-card>
-
 </div>
 
 <app-result [displayResult]="showResult"></app-result>

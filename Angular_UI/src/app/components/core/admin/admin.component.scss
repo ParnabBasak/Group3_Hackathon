@@ -1,6 +1,7 @@
 #login-fab{
     border-radius: 50%;
     height: 56px;
+    margin-top: 50px;
     margin: auto;
     min-width: 56px;
     width: 56px;
@@ -14,9 +15,22 @@
     right: 0;
     background-color: rgba(151, 223, 188, 0.68)!important;
 }
+
+.box {
+    position: relative;
+    top: 0;
+    opacity: 1;
+    float: left;
+    margin-top: 100px;
+    padding: 60px 50px 40px 50px;
+    width: 100%;
+    background: #fff;
+    border-radius: 10px;
+    transform: scale(1);
+    -webkit-transform: scale(1);
+    -ms-transform: scale(1);
+    z-index: 5;
+    max-width: 430px;
+  }
 .material-icons{ margin: 10px;}
 .adminpage .container{margin: 9% 0% -12% 0%;}
-
-.box{
-    max-width: 430px;
-}
