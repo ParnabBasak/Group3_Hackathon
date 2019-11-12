@@ -10,5 +10,5 @@ exports.getChannels = function(req, res) {
             msg:'Something went wrong.'
         })
     })
-   
+ 
 }
