@@ -33,10 +33,19 @@ router.post('/register', ctrlUser.register);
 router.post('/authenticate', ctrlUser.authenticate);
 router.get('/userProfile', jwtHelper.verifyJwtToken, ctrlUser.userProfile);
 
+// Gets the list of all channels
 router.get('/channels', ctrlChannel.getChannels);
+
+//Return the unique History saleDates for a given channel
 router.get('/history/:id', ctrlHistory.getSalesDates);
+
+//Return the unique Forecast saleDates for a given channel
 router.get('/forecast/:id', ctrlForecast.getSalesDates);
+
+//Returns the Search Results of Products, History and Forecast
 router.post('/trends', ctrlTrend.getTrendController);
+
+//Returns the lookup data for a KEY
 router.get('/master/:id', ctrlMaster.getLookups);
 
 module.exports = router;
