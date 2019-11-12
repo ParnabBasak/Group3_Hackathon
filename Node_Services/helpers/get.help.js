@@ -14,3 +14,8 @@ exports.getdbData = function(searchCriteria, collection2Search){
     });
     return promise;
 }
+
+exports.getMonYear = function(dtValue){
+    var dt = new Date(dtValue);
+    return(dt.toLocaleString('default',{month: 'short', year: 'numeric'}))
+}

@@ -9,6 +9,8 @@ exports.getTrendController = async function(req,res){
 
     var thisChannel = data.channel;
 
+    var summaryTemplate = {};
+
     var historyStartDate = new Date(data.historyStartDate);
     var historyTrendWeeks = data.historyTrendWeeks;
     var historyEndDate = new Date(historyStartDate);
@@ -33,6 +35,10 @@ exports.getTrendController = async function(req,res){
     for (let i=1;i<=forecastTrendWeeks;i++){
         dt.setDate(dt.getDate()+7);
         forecastWeeks['Week '+(i)] = {'saleDate':dt.toDateString(),quantity: '-'};
+        var dtString = GetHelp.getMonYear(dt);
+        if (summaryTemplate[dtString] == undefined){
+            summaryTemplate[dtString] = 0;
+        } 
     }
     
     var historySearchCriteria = {$query: 
@@ -69,7 +75,7 @@ exports.getTrendController = async function(req,res){
                     let tempDt = new Date(historyData['Week '+i].saleDate);
                     let endDt = new Date(tempDt);
                     endDt.setDate(endDt.getDate()+7);
-                    if (tempDt <= saleDate < endDt){
+                    if ((tempDt <= saleDate) && (saleDate< endDt)){
                         historyData['Week '+i].quantity = data.quantity;
                         break;
                     }
@@ -78,7 +84,8 @@ exports.getTrendController = async function(req,res){
                     productname: data.producct,
                     attribute: data.attribute,
                     history: historyData, 
-                    forecast: JSON.parse(JSON.stringify(forecastWeeks))
+                    forecast: JSON.parse(JSON.stringify(forecastWeeks)),
+                    forecastSummary: JSON.parse(JSON.stringify(summaryTemplate))
                 }
                 resultSet.push(dataSet);
             } else {
@@ -86,7 +93,9 @@ exports.getTrendController = async function(req,res){
                 dt = new Date(data.saleDate);
                 for(let i=1;i<=historyTrendWeeks;i++){
                     let tempDt = new Date(historyData['Week '+i].saleDate);
-                    if (tempDt.toDateString() === dt.toDateString()){
+                    let endDt = new Date(tempDt);
+                    endDt.setDate(endDt.getDate()+7);
+                    if ((tempDt <= dt) && (dt < endDt)){
                         historyData['Week '+i].quantity = data.quantity;
                         break;
                     }
@@ -110,13 +119,15 @@ exports.getTrendController = async function(req,res){
     forecast.forEach(
         function(data){
             var key = data.producct + '~' + data.attribute;
+
             index = indexSet[key];
             if (index === undefined){
                 let dataSet = {
                     productname: data.producct,
                     attribute: data.attribute,
                     history: JSON.parse(JSON.stringify(historyWeeks)), 
-                    forecast: JSON.parse(JSON.stringify(forecastWeeks))
+                    forecast: JSON.parse(JSON.stringify(forecastWeeks)),
+                    forecastSummary: JSON.parse(JSON.stringify(summaryTemplate))
                 }
                 index = indexSetCounter++;
                 indexSet[key] = index;
@@ -125,7 +136,14 @@ exports.getTrendController = async function(req,res){
             } 
             var obj2Update = resultSet[index];
             var forecastData = obj2Update.forecast;
+            var summary = obj2Update.forecastSummary;
             var saleDate = new Date(data.saleDate);
+            var dtString = GetHelp.getMonYear(saleDate);
+            if (summary[dtString] == undefined){
+                summary[dtString] = data.quantity;
+            } else {
+                summary[dtString] = summary[dtString] + data.quantity;
+            }
             for (let i=1;i<=forecastTrendWeeks;i++){
                 let templateDt = new Date(forecastData['Week '+i].saleDate);
                 let endDt = new Date(templateDt);
