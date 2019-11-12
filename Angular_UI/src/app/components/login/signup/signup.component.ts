@@ -3,6 +3,7 @@ import { NgForm } from '@angular/forms';
 import { Router } from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
 
+import { Constants } from '../../utils/constants';
 import { AuthService } from '../../../services/auth/auth.service';
 import { LookupsService } from 'src/app/services/master/lookups.service'
 
@@ -43,7 +44,7 @@ export class SignupComponent implements OnInit {
           });
         }
         else
-          this.toastr.error('Something went wrong.Please contact admin.', 'OOPS!', {
+          this.toastr.error(Constants.SYSTEM_ERROR_MESSAGE, 'OOPS!', {
             positionClass: 'toast-top-center' 
          });
       }

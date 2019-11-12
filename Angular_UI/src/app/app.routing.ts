@@ -15,8 +15,8 @@ const appRoutes: Routes = [
   { path: 'logout', component: SigninComponent },
   { path: 'signup', component: SignupComponent },
   { path: 'dashboard', component: DashboardComponent, canActivate: [AuthGuard]},
-  { path: 'admin', component: AdminComponent },
-  { path: 'forecast', component: ForecastComponent },
+  { path: 'admin', component: AdminComponent, canActivate: [AuthGuard]},
+  { path: 'forecast', component: ForecastComponent, canActivate: [AuthGuard] },
   { path: '**', component: ErrorComponent }
 ];
 

@@ -4,6 +4,7 @@ import { Router } from "@angular/router";
 import { ToastrService } from 'ngx-toastr';
 
 import { AuthService } from '../../../services/auth/auth.service';
+import { Constants } from '../../utils/constants';
 
 @Component({
   selector: 'app-signin',
@@ -34,7 +35,7 @@ export class SigninComponent implements OnInit {
         this.router.navigateByUrl('/dashboard');
       },
       err => {
-        this.toastr.error(err.error.message, 'OOPS!', {
+        this.toastr.error(Constants.SYSTEM_ERROR_MESSAGE, 'OOPS!', {
           positionClass: 'toast-top-center' 
        });
       }
