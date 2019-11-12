@@ -1,6 +1,6 @@
 Node_Services is a fully functional api server built in Node.js (Express, MongoDB) which serves as the services layer for the Hackathon project.
 
-## Installation
+## Local Installation and Run
 1. Create a folder to hold your installation: mkdir Node_Services
 2. FTP/Copy the contents of the zip to your newly created folder
 3. Enter folder: cd Node_Services
