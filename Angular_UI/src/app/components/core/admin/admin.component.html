@@ -1,67 +1,42 @@
-<div style="margin:80px" class="login-wrapper" fxLayout="row" fxLayoutAlign="center start">
-  <mat-card class="searchbox" style="max-width: 500px;">
+<div class="login-wrapper adminpage" fxLayout="row" fxLayoutAlign="center center">
+  <mat-card class="box">
+    <div id="login-fab" class="mdl-color--accent mdl-color-text--white">
+        <i id="lock-icon" class="material-icons">lock</i>
+    </div>
     <mat-card-header>
-      <mat-card-title>Admin</mat-card-title>
+      <mat-card-title>Admin Page</mat-card-title>
     </mat-card-header>
     <mat-card-content>
-      <div class="container">
-        <mat-grid-list cols="2" rowHeight="77">
-          <mat-grid-tile>
-            <div>
-              <input type="file" name="image" (change)="fileProgress($event)" />
-            </div>
-          </mat-grid-tile>
-          <mat-grid-tile>
-            <div>
-              <button type="button" cmat-stroked-button style="width: 150px;" color="accent" class="btn-block"
-                (click)="onSubmit()">Upload</button>
-            </div>
-          </mat-grid-tile>
+      <div class="container">          
+          <mat-grid-list cols="2" rowHeight="77">
+            <mat-grid-tile>
+              <div>
+                <!-- <input type="file" name="image" (change)="fileProgress($event)" /> -->
+                <button type="button" mat-raised-button (click)="fileInput.click()" ><mat-icon>folder</mat-icon>Choose File</button>
+                <input hidden (change)="fileProgress($event)" #fileInput type="file" name="image">
+              </div>
+            </mat-grid-tile>
+            <mat-grid-tile>
+              <div>
+                <!-- <button type="button" cmat-stroked-button style="width: 150px;" color="accent" class="btn-block"
+                  (click)="onSubmit()">Upload</button> -->
+                  <button type="button" mat-raised-button (click)="onSubmit()" color="primary"><mat-icon>cloud_upload</mat-icon>Upload</button>
+              </div>
+            </mat-grid-tile>
 
-          <mat-grid-tile colspan="2">
-            <div *ngIf="fileUploadProgress">
-              Upload progress: {{ fileUploadProgress }}
-            </div>
-            <div class="image-preview mb-3" *ngIf="previewUrl">
-              <img [src]="previewUrl" height="300" />
-            </div>
-
-            <div class="mb-3" *ngIf="uploadedFilePath">
-              {{uploadedFilePath}}
-            </div>
-          </mat-grid-tile>
-
-        </mat-grid-list>
-
-
-
-
-
-
-
-
-
-
-        <!-- <div class="row">
-        <div class="col-md-6 offset-md-3">
-            <h3>Choose File</h3>            
-            <div class="form-group">
-                <input type="file" name="image" (change)="fileProgress($event)" />
-            </div>
-            <div *ngIf="fileUploadProgress">
+            <mat-grid-tile colspan="2">
+              <div *ngIf="fileUploadProgress">
                 Upload progress: {{ fileUploadProgress }}
-            </div>
-            <div class="image-preview mb-3" *ngIf="previewUrl">
-                <img [src]="previewUrl" height="300" />                 
-            </div>
- 
-            <div class="mb-3" *ngIf="uploadedFilePath">
+              </div>
+              <!-- <div class="image-preview mb-3" *ngIf="previewUrl">
+                <img [src]="previewUrl" height="300" />
+              </div> -->
+
+              <div class="mb-3" *ngIf="uploadedFilePath">
                 {{uploadedFilePath}}
-            </div>
-             
-            
-        </div>
-    </div> -->
+              </div>
+            </mat-grid-tile>
+          </mat-grid-list>
       </div>
     </mat-card-content>
   </mat-card>

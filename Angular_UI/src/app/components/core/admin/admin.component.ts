@@ -23,6 +23,19 @@ export class AdminComponent implements OnInit {
     this.fileData = <File>fileInput.target.files[0];
     this.preview();
   }
+  onFileSelected() {
+    const inputNode: any = document.querySelector('#file');
+  
+    if (typeof (FileReader) !== 'undefined') {
+      const reader = new FileReader();
+  
+      reader.onload = (e: any) => {
+        this.fileData = e.target.result;
+      };
+  
+      reader.readAsArrayBuffer(inputNode.files[0]);
+    }
+  }
 
   preview() {
     // Show preview 
