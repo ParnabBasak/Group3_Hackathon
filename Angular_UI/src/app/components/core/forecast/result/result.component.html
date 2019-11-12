@@ -1,71 +1,110 @@
-<div style="border-style: solid;" *ngIf="displayResult">
-    <mat-grid-list cols="4" rowHeight="275px" gutterSize="5px">
-        <!-- Products and their Attributes -->
-        <mat-grid-tile>
-            <mat-card>
-                <mat-card-content>
-                    <div style="overflow-x:scroll">
-                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%">
-                            <thead>
-                                <th>Products/Metrics</th>
-                            </thead>
-                            <tbody>
-                                <ng-container *ngFor="let product of trends">
-                                    <tr>
-                                        <td>
-                                            <h5>{{product.productname}}</h5>
-                                        </td>
-                                    </tr>
-                                    <tr>
-                                        <td>{{product.attribute}}</td>
-                                    </tr>
-                                </ng-container>
-                            </tbody>
-                        </table>
-                    </div>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
+<hr>
+<div style="text-align:center" *ngIf="displayResult">
+    <button (click)="callChart()" type="button" class="btn btn-danger button4">Show Trend Chart</button>
+</div>
+<br>
 
-        <!-- History -->
-        <mat-grid-tile>
-            <mat-card>
-                <mat-card-content>
-                    <div style="overflow-x:scroll">
-                        <table datatable [dtOptions]="dtOptions" class="row-border hover compact" style="width:100%;">
-                            <thead>
-                                <th *ngFor="let historyweeks of trends[0].history  | keyvalue">{{historyweeks.key}}</th>
-                            </thead>
-                            <tbody>
-                                <ng-container *ngFor="let product of trends">
-                                    <ng-container *ngFor="let historyweeks of product.history | keyvalue">
-                                        <td>{{historyweeks.value.quantity}}</td>
-                                    </ng-container>
-                                    <tr></tr>
-                                </ng-container>
-                            </tbody>
-                        </table>
-                    </div>
-                </mat-card-content>
-            </mat-card>
-        </mat-grid-tile>
+<div class="container" id="resultcontainer" *ngIf="displayResult">
+    <div class="row">
+        <!-- Product Container -->
+        <div class="col-sm" id="tablecontainer">
+            <h5 align="center">Products</h5>
+            <table border=1 class="table table-sm table-dark">
 
-        <!-- Forecast Table-->
-        <mat-grid-tile>
-            <div style="overflow-x:scroll">
                 <thead>
-                    <th *ngFor="let forecastweeks of trends[0].forecast  | keyvalue">{{forecastweeks.key}}</th>
+
+                    <th class="bg-info" scope="col">Metrics</th>
+                    <th class="bg-info" scope="col">Products</th>
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let product of trends">
-                        <ng-container *ngFor="let forecastweeks of product.forecast | keyvalue">
-                            <td>{{forecastweeks.value.quantity}}</td>
+                        <tr>
+                            <td scope="row">{{product.attribute}}</td>
+                            <td scope="row">
+                                {{product.productname}}
+                            </td>
+                        </tr>
+
+
+
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        <!-- History Container -->
+        <div class="col-sm" id="tablecontainer">
+            <h5 align="center">History</h5>
+            <table border=1 class="table table-sm table-dark">
+
+                <thead>
+
+                    <th class="bg-info" scope="col"
+                        *ngFor="let historyweeks of trends[0].history | keyvalue : returnZero">{{historyweeks.key}}</th>
+
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let product of trends">
+                        <ng-container *ngFor="let historyweeks of product.history |  keyvalue : returnZero ">
+
+                            <td scope="row">{{historyweeks.value.quantity}}</td>
+
+
                         </ng-container>
                         <tr></tr>
                     </ng-container>
                 </tbody>
-            </div>
-        </mat-grid-tile>
+            </table>
+        </div>
+        <!-- Forecast Container -->
+        <div class="col-sm" id="tablecontainer">
+            <h5 align="center">Forecast</h5>
+            <table border=1 class="table table-sm table-dark">
 
-    </mat-grid-list>
+                <thead>
+
+                    <th class="bg-info" scope="col"
+                        *ngFor="let forecastweeks of trends[0].forecast  | keyvalue : returnZero ">{{forecastweeks.key}}
+                    </th>
+
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let product of trends">
+                        <ng-container *ngFor="let forecastweeks of product.forecast |  keyvalue : returnZero ">
+
+
+                            <td scope="row">{{forecastweeks.value.quantity}}</td>
+
+
+                        </ng-container>
+                        <tr></tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
+        
+        <!-- Summary Container -->
+        <!-- <div class="col-sm" id="tablecontainer">
+            <h5  align="center">Summary</h5>
+        <table border=1 class="table table-sm table-dark">
+
+                <thead>
+
+                        <th class="bg-info" scope="col" *ngFor="let forecastperiod of trends[0].forecastsummary  |  keyvalue : returnZero">{{forecastperiod.key}}</th>
+    
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let product of trends">
+                            <ng-container *ngFor="let forecastquantity of product.forecastsummary |  keyvalue : returnZero">
+    
+    
+                                <td scope="row">{{forecastquantity.value}}</td>
+    
+    
+                            </ng-container>
+                            <tr></tr>
+                        </ng-container>
+                    </tbody>
+        </table>
+    </div> -->
+    </div>
 </div>

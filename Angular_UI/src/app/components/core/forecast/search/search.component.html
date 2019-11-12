@@ -67,7 +67,7 @@
             </mat-card-content>
             <div align="center">
                 <button (click)="searchTrend()" mat-stroked-button style="width: 150px;" color="accent"
-                    class="btn-block" type="submit">Search</button>
+                    class="btn-block" type="submit" [disabled]="searchForm.invalid">Search</button>
             </div>
         </form>
     </mat-card>

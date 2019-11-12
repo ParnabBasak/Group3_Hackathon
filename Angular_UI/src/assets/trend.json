@@ -1,0 +1,389 @@
+{
+  "resultSet": [
+      {
+          "productname": "Brand A1-Phone",
+          "attribute": "Net Unit",
+          "history": {
+              "Week 1": {
+                  "saleDate": "Mon Jan 01 2018",
+                  "quantity": 5
+              },
+              "Week 2": {
+                  "saleDate": "Mon Jan 08 2018",
+                  "quantity": 6
+              },
+              "Week 3": {
+                  "saleDate": "Mon Jan 15 2018",
+                  "quantity": 7
+              },
+              "Week 4": {
+                  "saleDate": "Mon Jan 22 2018",
+                  "quantity": 8
+              },
+              "Week 5": {
+                  "saleDate": "Mon Jan 29 2018",
+                  "quantity": 9
+              }
+          },
+          "forecast": {
+              "Week 1": {
+                  "saleDate": "Fri Nov 01 2019",
+                  "quantity": 150
+              },
+              "Week 2": {
+                  "saleDate": "Fri Nov 08 2019",
+                  "quantity": 150
+              },
+              "Week 3": {
+                  "saleDate": "Fri Nov 15 2019",
+                  "quantity": 150
+              },
+              "Week 4": {
+                  "saleDate": "Fri Nov 22 2019",
+                  "quantity": 150
+              }
+          },
+          "forecastsummary": {
+            "Jan 2019": 20,
+             "Feb 2019": 10
+
+          }
+      },
+      {
+          "productname": "Brand A1-Phone",
+          "attribute": "Some Other Unit",
+          "history": {
+              "Week 1": {
+                  "saleDate": "Mon Jan 01 2018",
+                  "quantity": 6
+              },
+              "Week 2": {
+                  "saleDate": "Mon Jan 08 2018",
+                  "quantity": "-"
+              },
+              "Week 3": {
+                  "saleDate": "Mon Jan 15 2018",
+                  "quantity": "-"
+              },
+              "Week 4": {
+                  "saleDate": "Mon Jan 22 2018",
+                  "quantity": "-"
+              },
+              "Week 5": {
+                  "saleDate": "Mon Jan 29 2018",
+                  "quantity": "-"
+              }
+          },
+          "forecast": {
+              "Week 1": {
+                  "saleDate": "Fri Nov 01 2019",
+                  "quantity": "-"
+              },
+              "Week 2": {
+                  "saleDate": "Fri Nov 08 2019",
+                  "quantity": "-"
+              },
+              "Week 3": {
+                  "saleDate": "Fri Nov 15 2019",
+                  "quantity": "-"
+              },
+              "Week 4": {
+                  "saleDate": "Fri Nov 22 2019",
+                  "quantity": "-"
+              }
+          },
+          "forecastsummary": {
+             "Jan 2019": "100",
+             "Feb 2019": "200"
+          }
+      },
+      {
+          "productname": "Brand A1-Phone",
+          "attribute": "ARIMA",
+          "history": {
+              "Week 1": {
+                  "saleDate": "Mon Jan 01 2018",
+                  "quantity": "-"
+              },
+              "Week 2": {
+                  "saleDate": "Mon Jan 08 2018",
+                  "quantity": "-"
+              },
+              "Week 3": {
+                  "saleDate": "Mon Jan 15 2018",
+                  "quantity": "-"
+              },
+              "Week 4": {
+                  "saleDate": "Mon Jan 22 2018",
+                  "quantity": "-"
+              },
+              "Week 5": {
+                  "saleDate": "Mon Jan 29 2018",
+                  "quantity": "-"
+              }
+          },
+          "forecast": {
+              "Week 1": {
+                  "saleDate": "Fri Nov 01 2019",
+                  "quantity": 151
+              },
+              "Week 2": {
+                  "saleDate": "Fri Nov 08 2019",
+                  "quantity": 151
+              },
+              "Week 3": {
+                  "saleDate": "Fri Nov 15 2019",
+                  "quantity": 151
+              },
+              "Week 4": {
+                  "saleDate": "Fri Nov 22 2019",
+                  "quantity": 151
+              }
+          },
+           "forecastsummary": {
+             "Jan 2019": "40",
+             "Feb 2019": "20"
+          }
+      },
+      {
+          "productname": "Brand A1-Phone",
+          "attribute": "Last Year",
+          "history": {
+              "Week 1": {
+                  "saleDate": "Mon Jan 01 2018",
+                  "quantity": "-"
+              },
+              "Week 2": {
+                  "saleDate": "Mon Jan 08 2018",
+                  "quantity": "-"
+              },
+              "Week 3": {
+                  "saleDate": "Mon Jan 15 2018",
+                  "quantity": "-"
+              },
+              "Week 4": {
+                  "saleDate": "Mon Jan 22 2018",
+                  "quantity": "-"
+              },
+              "Week 5": {
+                  "saleDate": "Mon Jan 29 2018",
+                  "quantity": "-"
+              }
+          },
+          "forecast": {
+              "Week 1": {
+                  "saleDate": "Fri Nov 01 2019",
+                  "quantity": 152
+              },
+              "Week 2": {
+                  "saleDate": "Fri Nov 08 2019",
+                  "quantity": 152
+              },
+              "Week 3": {
+                  "saleDate": "Fri Nov 15 2019",
+                  "quantity": 152
+              },
+              "Week 4": {
+                  "saleDate": "Fri Nov 22 2019",
+                  "quantity": 152
+              }
+          },
+           "forecastsummary": {
+             "Jan 2019": "90",
+             "Feb 2019": "200"
+          }
+      },
+      {
+          "productname": "Brand A1-Phone",
+          "attribute": "Year Over Year",
+          "history": {
+              "Week 1": {
+                  "saleDate": "Mon Jan 01 2018",
+                  "quantity": "-"
+              },
+              "Week 2": {
+                  "saleDate": "Mon Jan 08 2018",
+                  "quantity": "-"
+              },
+              "Week 3": {
+                  "saleDate": "Mon Jan 15 2018",
+                  "quantity": "-"
+              },
+              "Week 4": {
+                  "saleDate": "Mon Jan 22 2018",
+                  "quantity": "-"
+              },
+              "Week 5": {
+                  "saleDate": "Mon Jan 29 2018",
+                  "quantity": "-"
+              }
+          },
+          "forecast": {
+              "Week 1": {
+                  "saleDate": "Fri Nov 01 2019",
+                  "quantity": 153
+              },
+              "Week 2": {
+                  "saleDate": "Fri Nov 08 2019",
+                  "quantity": 153
+              },
+              "Week 3": {
+                  "saleDate": "Fri Nov 15 2019",
+                  "quantity": 153
+              },
+              "Week 4": {
+                  "saleDate": "Fri Nov 22 2019",
+                  "quantity": 153
+              }
+          },
+           "forecastsummary": {
+             "Jan 2019": "190",
+             "Feb 2019": "2000"
+          }
+      },
+      {
+        "productname": "Brand A1-Phone",
+        "attribute": "Year Over Year",
+        "history": {
+            "Week 1": {
+                "saleDate": "Mon Jan 01 2018",
+                "quantity": "-"
+            },
+            "Week 2": {
+                "saleDate": "Mon Jan 08 2018",
+                "quantity": "-"
+            },
+            "Week 3": {
+                "saleDate": "Mon Jan 15 2018",
+                "quantity": "-"
+            },
+            "Week 4": {
+                "saleDate": "Mon Jan 22 2018",
+                "quantity": "-"
+            },
+            "Week 5": {
+                "saleDate": "Mon Jan 29 2018",
+                "quantity": "-"
+            }
+        },
+        "forecast": {
+            "Week 1": {
+                "saleDate": "Fri Nov 01 2019",
+                "quantity": 153
+            },
+            "Week 2": {
+                "saleDate": "Fri Nov 08 2019",
+                "quantity": 153
+            },
+            "Week 3": {
+                "saleDate": "Fri Nov 15 2019",
+                "quantity": 153
+            },
+            "Week 4": {
+                "saleDate": "Fri Nov 22 2019",
+                "quantity": 153
+            }
+        },
+         "forecastsummary": {
+           "Jan 2019": "190",
+           "Feb 2019": "2000"
+        }
+    },
+    {
+        "productname": "Brand A1-Phone",
+        "attribute": "Year Over Year",
+        "history": {
+            "Week 1": {
+                "saleDate": "Mon Jan 01 2018",
+                "quantity": "-"
+            },
+            "Week 2": {
+                "saleDate": "Mon Jan 08 2018",
+                "quantity": "-"
+            },
+            "Week 3": {
+                "saleDate": "Mon Jan 15 2018",
+                "quantity": "-"
+            },
+            "Week 4": {
+                "saleDate": "Mon Jan 22 2018",
+                "quantity": "-"
+            },
+            "Week 5": {
+                "saleDate": "Mon Jan 29 2018",
+                "quantity": "-"
+            }
+        },
+        "forecast": {
+            "Week 1": {
+                "saleDate": "Fri Nov 01 2019",
+                "quantity": 153
+            },
+            "Week 2": {
+                "saleDate": "Fri Nov 08 2019",
+                "quantity": 153
+            },
+            "Week 3": {
+                "saleDate": "Fri Nov 15 2019",
+                "quantity": 153
+            },
+            "Week 4": {
+                "saleDate": "Fri Nov 22 2019",
+                "quantity": 153
+            }
+        },
+         "forecastsummary": {
+           "Jan 2019": "190",
+           "Feb 2019": "2000"
+        }
+    },
+    {
+        "productname": "Brand A1-Phone",
+        "attribute": "Year Over Year",
+        "history": {
+            "Week 1": {
+                "saleDate": "Mon Jan 01 2018",
+                "quantity": "-"
+            },
+            "Week 2": {
+                "saleDate": "Mon Jan 08 2018",
+                "quantity": "-"
+            },
+            "Week 3": {
+                "saleDate": "Mon Jan 15 2018",
+                "quantity": "-"
+            },
+            "Week 4": {
+                "saleDate": "Mon Jan 22 2018",
+                "quantity": "-"
+            },
+            "Week 5": {
+                "saleDate": "Mon Jan 29 2018",
+                "quantity": "-"
+            }
+        },
+        "forecast": {
+            "Week 1": {
+                "saleDate": "Fri Nov 01 2019",
+                "quantity": 153
+            },
+            "Week 2": {
+                "saleDate": "Fri Nov 08 2019",
+                "quantity": 153
+            },
+            "Week 3": {
+                "saleDate": "Fri Nov 15 2019",
+                "quantity": 153
+            },
+            "Week 4": {
+                "saleDate": "Fri Nov 22 2019",
+                "quantity": 153
+            }
+        },
+         "forecastsummary": {
+           "Jan 2019": "190",
+           "Feb 2019": "2000"
+        }
+    }
+  ]
+}

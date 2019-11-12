@@ -8,6 +8,7 @@ import { environment } from '../../../environments/environment';
   providedIn: 'root'
 })
 export class SearchService {
+  //apiFetchTrend = "assets/trend.json"
   productTrends : object = [];
 
   constructor(private http: HttpClient) { }
@@ -16,5 +17,7 @@ export class SearchService {
      return this.http.post<any>(environment.apiBaseUrl + '/trends',data);
   }
 
-  
+  //  fetchTrend() : Observable<any>{
+  //      return this.http.get<any>(this.apiFetchTrend)
+  //  }
 }

@@ -1,0 +1,36 @@
+table {
+    table-layout: auto;
+}
+
+th,
+td {
+    overflow: hidden;
+    white-space: nowrap;
+}
+
+#tablecontainer{
+  float: left; 
+  overflow-x:auto; 
+  overflow-y:auto;
+}
+
+#resultcontainer {
+  min-height:200px; 
+  background-color: white; 
+  padding: 0 50px; 
+  max-width: 1470px;
+}
+
+.button {
+  background-color: #4CAF50;
+  border: none;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  text-decoration: none;
+  display: inline-block;
+  font-size: 16px;
+  margin: 4px 2px;
+}
+
+.button4 {border-radius: 8px;}
