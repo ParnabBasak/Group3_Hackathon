@@ -21,8 +21,8 @@ Keeping Node_Services running after closing the terminal can be done in a few wa
    1. Node.js version 7.x or greater is needed. npm should also be installed
    2. An accessible Mongodb instance is up and running. Mongo db url and port can be found in the .env config file. Change the url/port if your local instance is not as per our default.
    3. If you are an Admin user and would need to run the Upload functionality via the Admin screen, you would need to have Python3 installed. The following packages are required:
-     a. Pyhon 3.7.0. Command to install: install python3
-     b. Pip. Command to install: install pip
-     c. Pandas. Command to install: pip install pandas
-     d. Pymongo. Command to install: pip install pymongo
-     e. Statsmodels. Command to install: pip install statsmodels
+     Python 3.7.0. Command to install: install python3
+     2. Pip. Command to install: install pip
+     3. Pandas. Command to install: pip install pandas
+     4. Pymongo. Command to install: pip install pymongo
+     5. Statsmodels. Command to install: pip install statsmodels
