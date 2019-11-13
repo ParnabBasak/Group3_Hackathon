@@ -18,7 +18,7 @@ exports.getTrendController = async function(req,res){
     
     var historyWeeks = {}
     var dt = new Date(historyStartDate);
-    dt.setDate(dt.getDate()-6);
+    dt.setDate(dt.getDate()-7);
     for (let i=1;i<=historyTrendWeeks;i++){
         dt.setDate(dt.getDate()+7);
         historyWeeks['Week '+(i)] = {'saleDate':dt.toDateString(),quantity: '-'};
@@ -148,7 +148,7 @@ exports.getTrendController = async function(req,res){
                 let templateDt = new Date(forecastData['Week '+i].saleDate);
                 let endDt = new Date(templateDt);
                 endDt.setDate(endDt.getDate()+7);
-                if (templateDt <= saleDate < endDt){
+                if ((templateDt <= saleDate) && (saleDate < endDt)){
                     forecastData['Week '+i].quantity = data.quantity;
                 }
             }
@@ -157,4 +157,5 @@ exports.getTrendController = async function(req,res){
     res.json({
         resultSet
     });
+    
 }
