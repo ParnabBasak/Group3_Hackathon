@@ -132,4 +132,7 @@ export class PopupDialog implements OnInit {
       chart.render();
     }
   }
+  close() {
+    this.dialogRef.close();
+  }
 }
