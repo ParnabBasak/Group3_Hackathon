@@ -94,7 +94,7 @@ for i in uniquechannels:
         differenced = difference(X, weeks_in_year)
         
         # fit model
-        model = ARIMA(differenced, order=(1,1,1))
+        model = ARIMA(differenced, order=(7,0,0))
         model_fit = model.fit(disp=0)
         # multi-step out-of-sample forecast
         forecast = model_fit.forecast(steps=52)[0]
