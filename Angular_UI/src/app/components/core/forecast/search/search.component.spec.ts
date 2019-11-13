@@ -3,8 +3,12 @@ import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { SearchComponent } from './search.component';
 import { MatDatepickerModule } from '@angular/material/datepicker';
 import { MatNativeDateModule } from '@angular/material';
+import { HttpClientTestingModule, HttpTestingController} from '@angular/common/http/testing';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { RouterTestingModule } from '@angular/router/testing';
+import { ToastrService } from 'ngx-toastr';
+import { ToastrModule } from 'ngx-toastr';
 
-MatNativeDateModule
 
 describe('SearchComponent', () => {
   let component: SearchComponent;
@@ -13,13 +17,12 @@ describe('SearchComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [ SearchComponent ],
-      imports: [MatDatepickerModule, MatNativeDateModule],
+      imports: [MatDatepickerModule, MatNativeDateModule, FormsModule, ReactiveFormsModule, HttpClientTestingModule, RouterTestingModule, ToastrModule.forRoot()],
       schemas: [
         CUSTOM_ELEMENTS_SCHEMA
       ],
       providers: [
-        MatDatepickerModule,
-     ],
+        MatDatepickerModule, HttpClientTestingModule, ToastrService],
     })
     .compileComponents();
   }));
