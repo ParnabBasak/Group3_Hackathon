@@ -11,30 +11,30 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 | Task |	Layer |	Assigned | Status | Comments |
 | --- | --- | --- | --- | --- |
 |Database Creation|	DB| Parnab | Done | Refer to the Mongo_DB folder|	
-|Prepare Test Data|	DB| | |	|
-|Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| | |
-|Admin Page - UI|	Angular|	Balaji| | |
+|Prepare Test Data|	DB| Parnab | Done | Refer to samples subfolder under Mongo_DB folder|
+|Framework with SignIn/Signup/Header Footer|	Angular|	Parnab| Done | NA |
+|Admin Page - UI|	Angular|	Parnab/Balaji| Done | NA |
 |Admin Page - Serv|	Node| Parnab |Done | Refer the file controller/upload.controller.js |	
 |Admin Page - Serv|	Python|	Parnab|Done |Needs a bit more inscript commeting |
-|Forecast Page - Search Section-UI|	Angular|	George| | |
-|Forecast Page - Search Section-Services|	Node|	Bharti| | |
-|Forecast Page - Result Section-UI|	Angular|	Bala| | |
-|Forecast Page - Result Section-Services|	Node|	Praveen| | |
-|Forecast Page - Graph Section-UI|	Angular| John| | |
+|Forecast Page - Search Section-UI|	Angular|	Parnab  | Done | |
+|Forecast Page - Search Section-Services|	Node|	Bharti| Done | |
+|Forecast Page - Result Section-UI|	Angular|	Bala| Done | |
+|Forecast Page - Result Section-Services|	Node|	Abhijit/Praveen| Done | |
+|Forecast Page - Graph Section-UI|	Angular| John| Done | |
 |Forecast Page - Graph Section-Services|	Node| Abhijit| |	
-|Error Page|	Angular|	Balaji| | |
-|End to End Integration|	All Layers| | | |	
-|Test Scripts - UI + Code coverage|	Angular| | | |
-|Test Scripts - Service + Code coverage|	Node| | | |
-|Documentation|	All Layers| | | |
-|Enhance Look & Feel|	Angular| | | |	
+|Error Page|	Angular|	Balaji| Done | |
+|End to End Integration|	All Layers| Parnab | Done | |	
+|Create CI/CD Pipeline|	All Layers| Parnab | Done | |
+|Create Cloud Deployment environment|	All Layers| Parnab | Done | |
+|Documentation|	All Layers| All Team members | Done | |
+|Enhance Look & Feel|	Angular| Balaji | Done | |	
 
 ## Getting Started
 
 These instructions will get you a copy of the project up and running on your local machine for development and testing purposes. See deployment for notes on how to deploy the project on a live system.
 
 ### Accessing the PRODUCTION VERSION of the application
-Visit:
+Visit on your browser:
 
 http://forecasterapp.s3-website-us-east-1.amazonaws.com/
 
@@ -60,9 +60,9 @@ Refer to the Deployment Architecture slide in the Architectue section.
 
 ## Built With
 - Angular 8
-- Node
-- MongoDB
-- Python 3
+- Node 10.6.3
+- MongoDB 3.7.4
+- Python 3.7.0
 
 ## Authors
 
