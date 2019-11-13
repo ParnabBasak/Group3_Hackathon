@@ -148,7 +148,7 @@ exports.getTrendController = async function(req,res){
                 let templateDt = new Date(forecastData['Week '+i].saleDate);
                 let endDt = new Date(templateDt);
                 endDt.setDate(endDt.getDate()+7);
-                if (templateDt <= saleDate < endDt){
+                if ((templateDt <= saleDate) && (saleDate < endDt)){
                     forecastData['Week '+i].quantity = data.quantity;
                 }
             }
