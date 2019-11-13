@@ -84,6 +84,7 @@ for i in uniquechannels:
         
         #Get data for every unique product for a specific channel
         on_channel_and_product = on_channel[on_channel['producct'] == j]
+        print('Started reading for product {0}'.format(j))
         
         #Only select attribute = NET since that would be used for ARIMA calculation
         on_channel_and_product_attribute = on_channel_and_product[on_channel_and_product['attribute'] == 'Net Unit']
@@ -113,6 +114,9 @@ for i in uniquechannels:
         merged_forecast = merge(futureYearWeekStarts, predictions, j, i, 'ARIMA')
         
         x = forecasts.insert_many(merged_forecast)
-        print(merged_forecast)
-        print('----Inserted x.inserted_ids elements in the  collection------------------------------------------------------')
-        
+        #print(merged_forecast)
+        print('----Inserted {0} elements in the  collection--'.format(len(merged_forecast)))
+
+print('----------------------------')
+print('Python Forecasting completed')
+print('----------------------------')        

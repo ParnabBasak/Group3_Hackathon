@@ -1,6 +1,6 @@
 <hr>
 <div style="text-align:center" *ngIf="displayResult">
-        <!-- <div style="text-align:center">  -->
+    <!-- <div style="text-align:center">  -->
     <button (click)="callChart()" type="button" class="btn btn-danger button4">Show Trend Chart</button>
 </div>
 <br>
@@ -11,23 +11,16 @@
         <div class="col-sm" id="tablecontainer">
             <h5 align="center">Products</h5>
             <table border=1 class="table table-sm table-dark">
-
                 <thead>
-
-                    <th class="bg-info" scope="col">Metrics</th>
                     <th class="bg-info" scope="col">Products</th>
+                    <th class="bg-info" scope="col">Metrics</th>
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let product of trends">
                         <tr>
+                            <td scope="row">{{product.productname}}</td>
                             <td scope="row">{{product.attribute}}</td>
-                            <td scope="row">
-                                {{product.productname}}
-                            </td>
                         </tr>
-
-
-
                     </ng-container>
                 </tbody>
             </table>
@@ -38,18 +31,13 @@
             <table border=1 class="table table-sm table-dark">
 
                 <thead>
-
                     <th class="bg-info" scope="col"
                         *ngFor="let historyweeks of trends[0].history | keyvalue : returnZero">{{historyweeks.key}}</th>
-
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let product of trends">
                         <ng-container *ngFor="let historyweeks of product.history |  keyvalue : returnZero ">
-
                             <td scope="row">{{historyweeks.value.quantity}}</td>
-
-
                         </ng-container>
                         <tr></tr>
                     </ng-container>
@@ -60,52 +48,40 @@
         <div class="col-sm" id="tablecontainer">
             <h5 align="center">Forecast</h5>
             <table border=1 class="table table-sm table-dark">
-
                 <thead>
-
                     <th class="bg-info" scope="col"
                         *ngFor="let forecastweeks of trends[0].forecast  | keyvalue : returnZero ">{{forecastweeks.key}}
                     </th>
-
                 </thead>
                 <tbody>
                     <ng-container *ngFor="let product of trends">
                         <ng-container *ngFor="let forecastweeks of product.forecast |  keyvalue : returnZero ">
-
-
                             <td scope="row">{{forecastweeks.value.quantity}}</td>
-
-
                         </ng-container>
                         <tr></tr>
                     </ng-container>
                 </tbody>
             </table>
         </div>
-        
+
         <!-- Summary Container -->
         <div class="col-sm" id="tablecontainer">
-            <h5  align="center">Summary</h5>
-        <table border=1 class="table table-sm table-dark">
-
+            <h5 align="center">Summary</h5>
+            <table border=1 class="table table-sm table-dark">
                 <thead>
-
-                        <th class="bg-info" scope="col" *ngFor="let forecastperiod of trends[0].forecastSummary  |  keyvalue : returnZero">{{forecastperiod.key}}</th>
-    
-                    </thead>
-                    <tbody>
-                        <ng-container *ngFor="let product of trends">
-                            <ng-container *ngFor="let forecastquantity of product.forecastSummary |  keyvalue : returnZero">
-    
-    
-                                <td scope="row">{{forecastquantity.value}}</td>
-    
-    
-                            </ng-container>
-                            <tr></tr>
+                    <th class="bg-info" scope="col"
+                        *ngFor="let forecastperiod of trends[0].forecastSummary  |  keyvalue : returnZero">
+                        {{forecastperiod.key}}</th>
+                </thead>
+                <tbody>
+                    <ng-container *ngFor="let product of trends">
+                        <ng-container *ngFor="let forecastquantity of product.forecastSummary |  keyvalue : returnZero">
+                            <td scope="row">{{forecastquantity.value}}</td>
                         </ng-container>
-                    </tbody>
-        </table>
-    </div>
+                        <tr></tr>
+                    </ng-container>
+                </tbody>
+            </table>
+        </div>
     </div>
 </div>
