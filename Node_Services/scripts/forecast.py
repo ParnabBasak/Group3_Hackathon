@@ -108,7 +108,7 @@ for i in uniquechannels:
             inverted = inverse_difference(history, yhat, weeks_in_year)
             #print('Week %d: %f' % (week, inverted))
             history.append(inverted)
-            predictions.append(inverted)
+            predictions.append(int(round(inverted)))
             week += 1
         merged_forecast = merge(futureYearWeekStarts, predictions, j, i, 'ARIMA')
         
