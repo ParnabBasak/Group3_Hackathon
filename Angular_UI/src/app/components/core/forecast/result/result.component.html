@@ -1,5 +1,6 @@
 <hr>
 <div style="text-align:center" *ngIf="displayResult">
+        <!-- <div style="text-align:center">  -->
     <button (click)="callChart()" type="button" class="btn btn-danger button4">Show Trend Chart</button>
 </div>
 <br>
@@ -83,18 +84,18 @@
         </div>
         
         <!-- Summary Container -->
-        <!-- <div class="col-sm" id="tablecontainer">
+        <div class="col-sm" id="tablecontainer">
             <h5  align="center">Summary</h5>
         <table border=1 class="table table-sm table-dark">
 
                 <thead>
 
-                        <th class="bg-info" scope="col" *ngFor="let forecastperiod of trends[0].forecastsummary  |  keyvalue : returnZero">{{forecastperiod.key}}</th>
+                        <th class="bg-info" scope="col" *ngFor="let forecastperiod of trends[0].forecastSummary  |  keyvalue : returnZero">{{forecastperiod.key}}</th>
     
                     </thead>
                     <tbody>
                         <ng-container *ngFor="let product of trends">
-                            <ng-container *ngFor="let forecastquantity of product.forecastsummary |  keyvalue : returnZero">
+                            <ng-container *ngFor="let forecastquantity of product.forecastSummary |  keyvalue : returnZero">
     
     
                                 <td scope="row">{{forecastquantity.value}}</td>
@@ -105,6 +106,6 @@
                         </ng-container>
                     </tbody>
         </table>
-    </div> -->
+    </div>
     </div>
 </div>

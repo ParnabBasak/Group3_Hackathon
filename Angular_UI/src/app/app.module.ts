@@ -36,7 +36,7 @@ import { AuthInterceptor } from './services/auth/auth.interceptor';
 /* Routing */
 import { ROUTES } from './app.routing';
 import { SearchComponent } from './components/core/forecast/search/search.component';
-import { ResultComponent } from './components/core/forecast/result/result.component';
+import { ResultComponent, PopupDialog } from './components/core/forecast/result/result.component';
 
 @NgModule({
   declarations: [
@@ -51,7 +51,8 @@ import { ResultComponent } from './components/core/forecast/result/result.compon
     ForecastComponent,
     ErrorComponent,
     SearchComponent,
-    ResultComponent
+    ResultComponent,
+    PopupDialog
   ],
   imports: [
     BrowserModule,
@@ -71,7 +72,8 @@ import { ResultComponent } from './components/core/forecast/result/result.compon
     multi: true
   }],
   bootstrap: [AppComponent],
-  schemas: [CUSTOM_ELEMENTS_SCHEMA]
+  schemas: [CUSTOM_ELEMENTS_SCHEMA],
+  entryComponents: [PopupDialog]
 })
 
 export class AppModule { }
