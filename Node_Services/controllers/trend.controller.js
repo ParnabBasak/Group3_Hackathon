@@ -38,7 +38,7 @@ exports.getTrendController = async function(req,res){
         forecastWeeks['Week '+(i)] = {'saleDate':dt.toDateString(),quantity: '-'};
         var dtString = GetHelp.getMonYear(dt);
         if (summaryTemplate[dtString] == undefined){
-            summaryTemplate[dtString] = 0;
+            summaryTemplate[dtString] = '-' ;
         } 
     }
     
@@ -140,7 +140,7 @@ exports.getTrendController = async function(req,res){
             var summary = obj2Update.forecastSummary;
             var saleDate = new Date(data.saleDate);
             var dtString = GetHelp.getMonYear(saleDate);
-            if (summary[dtString] == undefined){
+            if (summary[dtString] == '-' ){
                 summary[dtString] = data.quantity;
             } else {
                 summary[dtString] = summary[dtString] + data.quantity;
