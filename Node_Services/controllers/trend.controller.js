@@ -2,6 +2,7 @@ const SalesHistory = require('../models/history.model');
 const SalesForecast = require('../models/forecast.model');
 const GetHelp = require('../helpers/get.help');
 const _ = require('lodash');
+const sortBy = require('array-sort-by');
 
 exports.getTrendController = async function(req,res){
     
@@ -153,7 +154,10 @@ exports.getTrendController = async function(req,res){
                 }
             }
     });
-
+    
+    resultSet = sortBy(resultSet, itm => itm.attribute);
+    resultSet = sortBy(resultSet, itm => itm.productname);
+    
     res.json({
         resultSet
     });
