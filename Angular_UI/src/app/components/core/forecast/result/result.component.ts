@@ -47,7 +47,7 @@ export class ResultComponent implements OnInit {
     let chartData = hdata.concat(fdata);
     this.dialog.open(PopupDialog, {
       width: '90%',
-      height: '475px',
+      height: '600px',
       maxHeight: '90%',
       maxWidth: '90%',
       data: { chartData: chartData }

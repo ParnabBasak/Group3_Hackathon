@@ -21,7 +21,7 @@ Refer to the detailed architecture and assumptions in the presentation as availa
 |Forecast Page - Result Section-UI|	Angular|	Bala| Done | |
 |Forecast Page - Result Section-Services|	Node|	Abhijit/Praveen| Done | |
 |Forecast Page - Graph Section-UI|	Angular| John| Done | |
-|Forecast Page - Graph Section-Services|	Node| Abhijit| |	
+|Forecast Page - Graph Section-Services|	Node| Abhijit| Done |	
 |Error Page|	Angular|	Balaji| Done | |
 |End to End Integration|	All Layers| Parnab | Done | |	
 |Create CI/CD Pipeline|	All Layers| Parnab | Done | |
