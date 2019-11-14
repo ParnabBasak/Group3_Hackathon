@@ -2,6 +2,9 @@
 
 This is the DEV repository for the Timeseries Forecasting Hackathon Case Study for Team 3.
 
+# Overview Recording
+https://youtu.be/JI0YlqAwMxs
+
 ## Architecture
 
 Refer to the detailed architecture and assumptions in the presentation as available in the architecture subfolder.
