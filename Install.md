@@ -1,3 +1,4 @@
+list-style-type:lower-roman;
 1. Install MongoDB
   i. Windows: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
     a. Download the installer (.msi) from the MongoDB Download Center
