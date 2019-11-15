@@ -25,7 +25,7 @@ list-style-type:lower-roman;
                DB Connected!
          If they dont, then verify that your mongoDB is up and running and you have mentioned the correct host 
          and port in .env file
-    viii. Use curl to verify connection to mongoDB. Run to view the data from database.
+    viii.Use curl to verify connection to mongoDB. Run to view the data from database.
           curl http://localhost:3000/api/channels
   ```
    
