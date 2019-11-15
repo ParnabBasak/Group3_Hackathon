@@ -48,10 +48,15 @@ Visit respective folder for detailed prerequisites that are needed to run in loc
 ### Installing in Local (Steps)
 Refer to the prerequisites section. If you have that meet, pls proceed further. 
 
-1. Create a new mongo DB instance called **Forecast**. Follow the scripts in as outlined in Mongo_DB folder to create the DB instance
+1. Create a new mongo DB instance called **Forecast**. 
+   Follow the scripts in as outlined in Mongo_DB folder to create the DB instance
+3. Install Python3, pip, pandas, pymongo and statsmodels. Follow the instructions in Node_Modules folder
 2. Run the node module by following the instructions in Node_Services folder
 3. Run the Angular app by following the instructions in Angular_UI folder
 4. Navigate to the UI frontend via url http://localhost:4200
+
+Detailed steps are in the following file
+[./](Install.md)
 
 ## Running the tests
 
