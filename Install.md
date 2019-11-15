@@ -15,7 +15,8 @@ list-style-type:lower-roman;
     iii.Verify the host and port that mongoDB instance is running on. If the host and port are other that
          localhost and 27017, then change the corresponsing seeting in .env (under Node_Services folder
          accordingly
-    iv. Change directory to the following path /Node_Services/uploads. Find the absolute path of this folder.       Copy the path.
+    iv. Change directory to the following path /Node_Services/uploads. Find the absolute path of this
+     folder.Copy the path.
     v. Go to the .env file (in the folder Node_Services) and paste the path to the value UPLOAD_FILE_DIR
     vi. Verify that the last line looks like
         UPLOAD_FILE_DIR=<Your local absolute path to ./Node_Services/uploads folder>  
