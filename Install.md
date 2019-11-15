@@ -1,11 +1,11 @@
 1. Install MongoDB
-    i. Windows: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
-        a. Download the installer (.msi) from the MongoDB Download Center
-        b. Run the MongoDB installer
-        c. Follow the MongoDB Community Edition installation wizard.
-        d. Install MongoDB Compass
-        e. To begin using MongoDB, connect a mongo.exe shell to the running MongoDB instance 
-            open a Command Interpreter with Administrative privileges and run:
+  i. Windows: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+    a. Download the installer (.msi) from the MongoDB Download Center
+    b. Run the MongoDB installer
+    c. Follow the MongoDB Community Edition installation wizard.
+    d. Install MongoDB Compass
+    e. To begin using MongoDB, connect a mongo.exe shell to the running MongoDB instance 
+       open a Command Interpreter with Administrative privileges and run:
             "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
        Mac OS X: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
         a. Install XCode
