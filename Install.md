@@ -38,8 +38,8 @@
         iv. Verify that the 3 collections channels, modelparams and lookups have been created in Forecast db and have documents in them   
      ```  
 
-2. Install Python3
-```
+2. **Install Python3**
+   ```
     i. Windows: Refer https://realpython.com/installing-python/
        a. Download the Python 3 Installer
        b. Run the Installer
@@ -74,7 +74,7 @@
            pip install pandas
        c. Install Statsmodels    
            pip install statsmodels            
-```
+   ```
     
 3. Clone or download Github repository https://github.com/ParnabBasak/Group3_Hackathon
 
@@ -111,8 +111,4 @@
    
 6. Go to http://localhost:4200/ to verify that Angular_UI is up and running
   
-
-7. Go to the Signup page and verify that the Role dropdown is populated
-           
-          
-
+7. Go to the Signup page and verify that the Role dropdown is populated.
