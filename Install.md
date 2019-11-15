@@ -17,7 +17,9 @@
                 brew services start mongodb-community
             e. Connect and Use MongoDB, run
                 mongo        
-             
+```
+  Create and Populate Database and master collection                
+```             
     ii. Create the following DB by executing the following command in Mongo shell
          use Forecast
 
