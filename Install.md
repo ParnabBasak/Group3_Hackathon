@@ -79,7 +79,7 @@
 3. Clone or download Github repository https://github.com/ParnabBasak/Group3_Hackathon
 
 4. Run Node_Services Server
-  ```
+   ```
     i.   cd <Path to your local Node_Server folder>
     ii.  npm install
     iii. Verify the host and port that mongoDB instance is running on. If the host and port are other that
@@ -97,7 +97,7 @@
          and port in .env file
     viii.Use curl to verify connection to mongoDB. Run to view the data from database.
           curl http://localhost:3000/api/channels
-  ```
+   ```
    
 5. Run Angular_UI Client
   ```
