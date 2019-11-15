@@ -56,7 +56,7 @@ Refer to the prerequisites section. If you have that meet, pls proceed further.
 4. Navigate to the UI frontend via url http://localhost:4200
 
 Detailed steps are in the following file
-[./](Install.md)
+[Install](Install.md)
 
 ## Running the tests
 
