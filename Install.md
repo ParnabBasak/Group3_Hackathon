@@ -13,7 +13,8 @@ list-style-type:lower-roman;
     i.  cd <Path to your local Node_Server folder>
     ii. npm install
     iii.Verify the host and port that mongoDB instance is running on. If the host and port are other that
-         localhost and 27017, then change the corresponsing seeting in .env (under Node_Services folder) accordingly
+         localhost and 27017, then change the corresponsing seeting in .env (under Node_Services folder
+         accordingly
     iv. Change directory to the following path /Node_Services/uploads. Find the absolute path of this folder.       Copy the path.
     v. Go to the .env file (in the folder Node_Services) and paste the path to the value UPLOAD_FILE_DIR
     vi. Verify that the last line looks like
@@ -21,7 +22,8 @@ list-style-type:lower-roman;
     vii. Run npm start and verify that the following lines show 
                Listening on port 3000
                DB Connected!
-         If they dont, then verify that your mongoDB is up and running and you have mentioned the correct host and port in .env file
+         If they dont, then verify that your mongoDB is up and running and you have mentioned the correct host 
+         and port in .env file
     viii. Use curl to verify connection to mongoDB. Run to view the data from database.
           curl http://localhost:3000/api/channels
   ```
