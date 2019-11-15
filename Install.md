@@ -1,5 +1,5 @@
-1. Install MongoDB
-  * Setup MongoDB
+1. **Install MongoDB**
+   * Setup MongoDB
 ```
     i. Windows: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
         a. Download the installer (.msi) from the MongoDB Download Center
@@ -19,7 +19,7 @@
             e. Connect and Use MongoDB, run
                 mongo        
 ```
-  * Create and Populate Database and master collection                
+   * Create and Populate Database and master collection                
 ```             
     ii. Create the following DB by executing the following command in Mongo shell
          use Forecast
