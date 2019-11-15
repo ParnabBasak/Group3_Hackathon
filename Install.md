@@ -13,14 +13,11 @@ list-style-type:lower-roman;
 5. Run Angular_UI Client
    
 6. Go to http://localhost:4200/ to verify that Angular_UI is up and running
-<ol type="a">
-  <li>cd <Path to your local Angular_UI folder></li>
-  <li>Change the host and port of your Node_Services server (if not running on localhost and on port 3000) in the Angular_UI/src/environments/environment.ts file 
-   apiBaseUrl: 'http://<your host>:<your port>/api'</li>
-  <li>Run npm install</li>
-  <li>Run npm start </li>
-</ol>
-
+  `a. cd <Path to your local Angular_UI folder>
+  b. Change the host and port of your Node_Services server (if not running on localhost and on port 3000) in the Angular_UI/src/environments/environment.ts file 
+   apiBaseUrl: 'http://<your host>:<your port>/api' 
+  c. Run npm install
+  d. Run npm start`
 
 7. Go to the Signup page and verify that the Role dropdown is populated
            
