@@ -38,8 +38,43 @@ list-style-type:lower-roman;
 ```  
 
 2. Install Python3
-    
+```
+    i. Windows: Refer https://realpython.com/installing-python/
+       a. Download the Python 3 Installer
+       b. Run the Installer
+       c. Verify the version of python by running the following from powershell/command prompt:
+           python3 ––version
+       d. Install pip
+           - Download get-pip.py to a folder on your computer.
+           - Open a command prompt and navigate to the folder containing get-pip.py.
+           - Run the following command:
+               python get-pip.py
+           - pip -V         
 
+       Mac OS X: Refer https://programwithus.com/learn-to-code/install-python3-mac/
+       a. Install Brew
+       b. Install Python3 with Brew, run
+           brew install python3
+       c, Set (Optional) PATH environment. run
+           export PATH=/usr/local/bin:/usr/local/sbin:$PATH
+       d. Verify the version of python by running the following from terminal:
+           python3 ––version    
+       e. Install pip (Refer https://pip.pypa.io/en/stable/installing/)
+           - Download pip, by running the following in your terminal
+               curl https://bootstrap.pypa.io/get-pip.py -o get-pip.py
+           - Install pip using python3
+                python3 get-pip.py    
+           - Verify the installation of pip3 by running the following on the Terminal
+                which pip3
+    ii. Run the following commands from command prompt/powershell (for Windows) or terminal (for Mac OS X)
+       a. Install pymongo (Refer: https://api.mongodb.com/python/current/installation.html)
+           python3 -m pip install pymongo
+       b. Install pandas
+           pip install pandas
+       c. Install Statsmodels    
+           pip install statsmodels            
+```
+    
 3. Clone or download Github repository https://github.com/ParnabBasak/Group3_Hackathon
 
 4. Run Node_Services Server
