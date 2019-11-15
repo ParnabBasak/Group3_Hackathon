@@ -80,9 +80,9 @@
            pip install statsmodels            
    ```
     
-3. Clone or download the current Github repository 
+3. **Clone or Download** the current Github repository 
 
-4. Run Node_Services Server
+4. **Run Node_Services Server**
    ```
     i.   cd <Path to your local Node_Server folder>
     ii.  Run from command prompt/powershell (for Windows) or terminal (for Mac OS X)
@@ -112,7 +112,7 @@
           This should show 3 documents being brought back from the database.
    ```
    
-5. Run Angular_UI Client
+5. **Run Angular_UI Client**
     ```
     a. cd <Path to your local Angular_UI folder>
     b. Change the host and port of your Node_Services server (if not running on localhost and on port 3000) 
@@ -122,6 +122,8 @@
     d. Run npm start
     ```
    
-6. Go to http://localhost:4200/ to verify that Angular_UI is up and running
+6. Go to http://localhost:4200/ from Google Chrome browser to verify that Angular_UI is up and running
   
 7. Go to the Signup page and verify that the Role dropdown is populated.
+
+8. Go Signup and then Signin 
