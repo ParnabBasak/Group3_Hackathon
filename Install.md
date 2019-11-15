@@ -1,7 +1,41 @@
 list-style-type:lower-roman;
 
 1. Install MongoDB
-  
+```
+    i. Windows: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-windows/
+        a. Download the installer (.msi) from the MongoDB Download Center
+        b. Run the MongoDB installer
+        c. Follow the MongoDB Community Edition installation wizard.
+        d. Install MongoDB Compass
+        e. To begin using MongoDB, connect a mongo.exe shell to the running MongoDB instance 
+        open a Command Interpreter with Administrative privileges and run:
+                "C:\Program Files\MongoDB\Server\4.2\bin\mongo.exe"
+        Mac OS X: Refer https://docs.mongodb.com/manual/tutorial/install-mongodb-on-os-x/
+            a. Install XCode
+            b. Install Homebrew
+            c. Install MongoDB by executing the following command:
+                brew install mongodb-community@4.2
+            d. Run MongoDB using brew, run 
+                brew services start mongodb-community
+            e. Connect and Use MongoDB, run
+                mongo        
+             
+    ii. Create the following DB by executing the following command in Mongo shell
+         use Forecast
+
+    iii. Populate Master data by running the following command from the shell:
+         db.channels.insert({"channelId": "DSO", "channelName": "Direct Store Order"})
+         db.channels.insert({"channelId": "DOS", "channelName": "Direct Online Sales"})
+         db.channels.insert({"channelId": "PHO", "channelName": "Phone Order"}) 
+
+         db.modelparams.insert({"fromDate": Date("2019-01-01"),"toDate": Date("2019-01-01"),"model": "ARIMA","values": [{"key":"p", "value": 1},{"key":"d", "value": 1},{"key":"q", "value": 1}]})
+
+         db.lookups.insert({"key": "WEEKS","values": [{"key":"4", "value": "4"},{"key":"5", "value": "5"},{"key":"6", "value": "6"},{"key":"7", "value": "7"},{"key":"8", "value": "8"},{"key":"9", "value": "9"},{"key":"10", "value": "10"},{"key":"11", "value": "11"},{"key":"12", "value": "12"},{"key":"13", "value": "13"},{"key":"14", "value": "14"},{"key":"15", "value": "15"},{"key":"16", "value": "16"},{"key":"17", "value": "17"},{"key":"18", "value": "18"},{"key":"19", "value": "19"},{"key":"20", "value": "20"},{"key":"21", "value": "21"},{"key":"22", "value": "22"},{"key":"23", "value": "23"},{"key":"24", "value": "24"},{"key":"25", "value": "25"},{"key":"26", "value": "26"}]}) 
+
+         db.lookups.insert({"key": "USERROLES","values": [{"key":"ADMIN", "value": "Administrator"},{"key":"GENERAL", "value": "General"}]})
+
+    iv. Verify that the 3 collections channels, modelparams and lookups have been created in Forecast db and have documents in them   
+```  
 
 2. Install Python3
     
