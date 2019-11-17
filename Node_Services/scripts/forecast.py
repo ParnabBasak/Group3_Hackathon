@@ -7,6 +7,8 @@ from pymongo import MongoClient
 from pandas import read_csv
 from statsmodels.tsa.arima_model import ARIMA
 import numpy
+import json
+from bson.json_util import dumps
 
 #############################################################
 #This is a simple dummy program created to learn more about python based iteration and handling
@@ -21,6 +23,24 @@ forecasts = db.salesforecasts
 #Delete all existing Data in Forecast Collection
 x = forecasts.delete_many({})
 print(x.deleted_count, " documents deleted.")
+
+#############################################################
+#This extracts the values of ARIMA order p,d,q from the DB 
+modelparams = db.modelparams
+
+modelparamsdocs = modelparams.find({"model": "ARIMA"}, {"values": 1, "_id": False})
+
+for cursor in modelparamsdocs:
+  print(cursor.get("values"))
+  for val in cursor.get("values"):
+     if val.get("key") == 'p':
+       p = val.get("value")
+     if val.get("key") == 'd':
+       d = val.get("value")
+     if val.get("key") == 'q':
+       q = val.get("value")
+
+print('----Model params from database p = {0} d = {1} q={2} --'.format(p, d, q)    
 
 #############################################################
 #This function calculates all the week start dates of an year
@@ -95,7 +115,8 @@ for i in uniquechannels:
         differenced = difference(X, weeks_in_year)
         
         # fit model
-        model = ARIMA(differenced, order=(7,0,0))
+        model = ARIMA(differenced, order=(p,d,q))
+        #model = ARIMA(differenced, order=(1,1,1))
         model_fit = model.fit(disp=0)
         # multi-step out-of-sample forecast
         forecast = model_fit.forecast(steps=52)[0]
